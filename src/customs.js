@@ -2,9 +2,9 @@ export const post  =  [
     {
         type: 'SLIDE',
         imgUrls: [
-            'https://www.hdwallback.net/wp-content/uploads/2018/01/4k-nature-wallpapers-1280x720.jpg', 
-            'https://images.wallpapersden.com/image/download/pink-lake-8k_65716_1280x720.jpg',
-            'https://images.wallpaperscraft.com/image/beautiful_scenery_mountains_lake_nature_93318_1280x720.jpg'
+            'https://s18053.pcdn.co/wp-content/uploads/2019/11/Lincoln-woods-reflection-3-1800x500.jpg', 
+            'https://www.rupertsoskin.com/uploads/banner3_1463228887.jpg',
+            'https://ardenetvous.com/wp-content/uploads/2020/01/fagnes_celine_lecomte-e1579856401849-1800x500.jpg',
         ]
     },
     {
