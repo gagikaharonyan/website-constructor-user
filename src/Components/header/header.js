@@ -11,11 +11,13 @@ function Header(props) {
 
     return(
         <div className={classes.root}>
-            <Link className={classes.appLogo} to='/'><span style={{color: "#3fe4fd"}}>Website</span> <span
-                style={{color: "#a166e4"}}>Constructor</span></Link>        
-            {site.isLoaded
+            <Link className={classes.appLogo} to='/'>
+                <span>Website</span> 
+                <span>Constructor</span>
+            </Link>        
+            { site.isLoaded
             ?<NavBar className={classes.navLinks} links={site.data.headerPages}></NavBar>
-            : ''}
+            : '' }
         </div>
     );
     

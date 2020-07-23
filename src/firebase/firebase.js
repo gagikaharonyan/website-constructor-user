@@ -19,8 +19,6 @@ class FireBase {
         this.db = app.database();
         this.storage = app.storage();
     }
-
-
 }
 
 export default FireBase

@@ -22,6 +22,12 @@
         width: '20%',
         whiteSpace: 'nowrap',
         marginLeft: 10,
+        '& span:first-child': {
+            color: "#3fe4fd"
+        },
+        '& span:nth-child(2)': {
+            color: "#a166e4"
+        }
     },
     navLinks: {
         flex: 5,

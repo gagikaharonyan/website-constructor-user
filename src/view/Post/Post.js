@@ -16,10 +16,10 @@ function Post () {
         })
     }, []);
 
-    return (<div>
-        {post
-        ?post.map(renderComponent)
-        :<span>Loading</span>}
-    </div>);
+    return (
+        <div>
+            { post ? post.map(renderComponent) : <span>Loading</span> }
+        </div>
+        );
 }
 export default Post;
