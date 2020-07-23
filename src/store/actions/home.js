@@ -1,4 +1,4 @@
-import {LOADING_DATA} from "../actionTypes/user"
+import {LOADING_DATA} from "../actionTypes/site"
 
 export const loading = (boolean) => {
     return {

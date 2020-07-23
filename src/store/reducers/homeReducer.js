@@ -1,4 +1,4 @@
-import {GET_USER,LOADING_DATA,ERROR} from "../actionTypes/home"
+import {GET_USER,LOADING_DATA,ERROR} from "../actionTypes/site";
 
 const initialState = {
     user: {},

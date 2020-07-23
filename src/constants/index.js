@@ -1,7 +1,1 @@
-export const Urls = [
-    {
-        id: 1,
-        name: "Home",
-        url: "/",
-    }
-];
+export {Urls, componentTypes} from './consts';
