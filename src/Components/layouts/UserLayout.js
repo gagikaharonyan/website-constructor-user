@@ -2,9 +2,14 @@ import React, { useEffect } from "react";
 import {Container, Row} from 'react-bootstrap';
 import Header from "../header/header"
 import {connect} from "react-redux";
-import {fetchSite} from "../../store/actions/site"
+import {fetchSite} from "../../store/actions/site";
+
+import { useStyles } from './UserLayout.style';
 
 const UserLayout = (props) => {
+
+    const classes = useStyles();
+
     const loadSite = () => {
         props.site.isLoaded || props.fetchSite();
     }
@@ -14,7 +19,7 @@ const UserLayout = (props) => {
     }, [])
 
     return (
-        <Container fluid={true} style={{marginTop:80}}>
+        <Container fluid={true} className={classes.mainContainer}>
             <Row style={{display: 'block'}}>
                 <Header/>
             </Row>
