@@ -1,17 +1,16 @@
 import { makeStyles } from '@material-ui/core';
 
-const styles = {
-    '@font-face': {
-      fontFamily: 'MyWebFont',
-      src: 'url(https://fonts.googleapis.com/css?family=Special+Elite)'
-    }
-  }
-
 export const useStyles = makeStyles({
     quote: {
         fontFamily: "'Special Elite', cursive",
-        width:500,
+        width:600,
         margin: '100px auto 80px',
+        '@media only screen and (max-width:600px)': {
+            width:350
+        },
+        '@media only screen and (max-width:480px)': {
+            width:300
+        },
 
         '& blockquote':  {
             fontWeight: 100,
@@ -21,6 +20,9 @@ export const useStyles = makeStyles({
             position: 'relative',
             margin: 0,
             padding: '.5rem',
+            '@media only screen and (max-width:480px)': {
+                width:300
+            },
             
         },
         '& blockquote:before': {
@@ -31,7 +33,12 @@ export const useStyles = makeStyles({
             height: '4rem',
             content: '"“"',
             left: '-5rem',
-            top: '-2rem'
+            top: '-2rem',
+            '@media only screen and (max-width:600px)': {
+                fontSize: '6rem',
+                left: '-2rem',
+
+            }
         },
         '& blockquote:after': {
             position: 'absolute',
@@ -41,7 +48,13 @@ export const useStyles = makeStyles({
             height: '4rem',
             content: '"”"',
             right: '-5rem',
-            bottom: '1rem',
+            bottom: '0rem',
+            '@media only screen and (max-width:600px)': {
+                right: '-2rem',
+                fontSize: '6rem',
+            }
+
         }
-    }
+    },
+
 })

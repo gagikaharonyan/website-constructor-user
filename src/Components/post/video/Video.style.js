@@ -8,7 +8,7 @@ export const useStyles = makeStyles({
             width:'100%',
         },
         '& iframe': {
-            width:800,
+            width:'100%',
             height:500,
             margin: 'auto',
             '@media only screen and (max-width: 800px)': {
