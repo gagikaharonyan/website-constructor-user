@@ -17,14 +17,14 @@ export const post  =  [
     },
     {
         type: 'PARAGRAPH',
-        text: ''
+        text: 'The term "nature" may refer to living plants and animals, geological processes, weather, and physics, such as matter and energy. The term is often refers to the "natural environment" or wilderness—wild animals, rocks, forest, beaches, and in general areas that have not been substantially altered by humans, or which persist despite human intervention. For, example, manufactured objects and human interaction are generally not considered part of nature, unless qualified as, for example, "human nature" or "the whole of nature". This more traditional concept of "nature" implies a distinction between natural and artificial elements of the Earth, with the artificial as that which has been brought into being by a human consciousness or a human mind.'
     },
     {
         type: 'VIDEO',
-        videoParam: ''
+        videoParam: 'v=P_QmRROJYAo'
     },
     {
         type: 'QUOTE',
-        text: ''
+        text: 'Going to the mountains is like going home.'
     }
 ]
