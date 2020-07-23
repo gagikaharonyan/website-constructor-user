@@ -6,6 +6,7 @@ import Slide from '../../Components/post/slide';
 import Heading from '../../Components/post/heading';
 import Photo from '../../Components/post/photo';
 import Paragraph from '../../Components/post/paragraph';
+import Video from '../../Components/post/video';
 
 const renderComponent = (component) => {
     switch (component.type) {
@@ -14,7 +15,7 @@ const renderComponent = (component) => {
         case type.PARAGRAPH:
             return <Paragraph text={component.text} key={uuid()} />
         case type.VIDEO:
-            return<h1 key={uuid()}>component</h1>
+            return<Video param={component.videoParam} key={uuid()} />
         case type.QUOTE:
             return <h1>component</h1>
         case type.HEADING:

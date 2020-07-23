@@ -21,7 +21,7 @@ export const post  =  [
     },
     {
         type: 'VIDEO',
-        videoParam: 'v=P_QmRROJYAo'
+        videoParam: 'P_QmRROJYAo'
     },
     {
         type: 'QUOTE',
