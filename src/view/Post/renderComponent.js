@@ -2,6 +2,7 @@ import React from'react';
 import {componentTypes as type} from '../../constants';
 
 import Slide from '../../Components/slide';
+import Heading from '../../Components/heading';
 
 const renderComponent = (component) => {
     switch (component.type) {
@@ -14,7 +15,7 @@ const renderComponent = (component) => {
         case type.QUOTE:
             return <h1>component</h1>
         case type.HEADING:
-            return <h1>component</h1>
+            return <Heading text={component.text} />
         case type.PHOTO:
             return <h1>component</h1>
         default:

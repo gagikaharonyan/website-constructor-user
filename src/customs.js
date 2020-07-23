@@ -9,11 +9,11 @@ export const post  =  [
     },
     {
         type: 'HEADING',
-        text: ''
+        text: 'My first awesome post'
     },
     {
         type: 'PHOTO',
-        imgUrl: ''
+        imgUrl: 'https://images.wallpapersden.com/image/download/pink-lake-8k_65716_1280x720.jpg'
     },
     {
         type: 'PARAGRAPH',
