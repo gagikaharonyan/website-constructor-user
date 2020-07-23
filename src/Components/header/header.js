@@ -1,33 +1,24 @@
-import React from "react";
-import {Nav, Navbar} from "react-bootstrap";
-import {Link} from "react-router-dom";
-import {withRouter} from "react-router";
+import React from 'react' 
+import {useStyle} from './Header.style'
+import NavBar from './NavBar'
+import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
+import {withRouter} from "react-router";
 
-
-const Header = (props) => {
-    const links = (links) => {
-        return links.map((el) => <Link key={el.id} style={{marginTop: '6px', marginLeft: "8px"}}
-                                       to={el.url}>{el.name}</Link>)
-    }
-
+function Header(props) {
     const {site} = props;
+    const classes = useStyle();
 
-    return (
-        <Navbar bg="light" expand='md'>
-            <Navbar.Brand href="#home"><Link to={"/"}><span style={{color: "#3fe4fd"}}>Website</span> <span
-                style={{color: "#a166e4"}}>Constructor</span></Link></Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-            <Navbar.Collapse id="basic-navbar-nav">
-                {site.isLoaded
-                ?<Nav className="mr-auto">
-                    {links(site.data.headerPages)}
-                </Nav>
-                : ''}
-                
-            </Navbar.Collapse>
-        </Navbar>
-    )
+    return(
+        <div className={classes.root}>
+            <Link className={classes.appLogo} to='/'><span style={{color: "#3fe4fd"}}>Website</span> <span
+                style={{color: "#a166e4"}}>Constructor</span></Link>        
+            {site.isLoaded
+            ?<NavBar className={classes.navLinks} links={site.data.headerPages}></NavBar>
+            : ''}
+        </div>
+    );
+    
 }
 
 const mapStateToProps = (state) => ({

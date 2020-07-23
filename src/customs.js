@@ -1,4 +1,4 @@
-const post  =  [
+export const post  =  [
     {
         type: 'SLIDE',
         imgUrls: []

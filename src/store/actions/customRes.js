@@ -4,22 +4,22 @@ const customRes = {
     headerPages: [
         {
             id: 1,
-            name: 'Home',
+            title: 'Home',
             url: '/'
         },
         {
             id: 2,
-            name: 'Page2',
+            title: 'Page2',
             url: '/page2'
         },
         {
             id: 3,
-            name: 'page3',
+            title: 'page3',
             url: '/page3'
         },
         {
             id: 4,
-            name: 'Page4',
+            title: 'Page4',
             url: '/page4'
         }
     ],
