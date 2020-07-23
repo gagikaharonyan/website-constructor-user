@@ -10,4 +10,8 @@ export const componentTypes = {
     SLIDE: 'SLIDE',
     POST: 'POST',
     QUOTE: 'QUOTE',
+    HEADING: 'HEADING',
+    PHOTO: 'PHOTO',
+    PARAGRAPH: 'PARAGRAPH',
+    VIDEO: 'VIDEO'
 }
