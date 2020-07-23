@@ -37,6 +37,8 @@ export const useStyles = makeStyles({
             '@media only screen and (max-width:600px)': {
                 fontSize: '6rem',
                 left: '-2rem',
+                top: '-3rem',
+
 
             }
         },
@@ -52,6 +54,8 @@ export const useStyles = makeStyles({
             '@media only screen and (max-width:600px)': {
                 right: '-2rem',
                 fontSize: '6rem',
+                bottom: '-2rem',
+
             }
 
         }
