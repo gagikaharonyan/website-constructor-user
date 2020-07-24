@@ -14,7 +14,7 @@ export const useStyles = makeStyles ({
         width:1024,
         margin:'auto',
         display: 'flex',
-        height: window.innerHeight,
+        height: window.innerHeight - 60,
         alignItems: 'center',
         overflow: 'hidden',
         '@media only screen and (max-width:1024px)': {
