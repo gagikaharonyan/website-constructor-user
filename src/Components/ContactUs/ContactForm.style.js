@@ -2,7 +2,16 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export const useStyle = makeStyles({
     root: {
-        width: 500,
+        width: 600,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        padding: '40px 50px'
+    },
+    caption: {
+        fontSize: 26,
+        color: 'black',
+        marginBottom: 20,
     },
     form: {
         width: '100%',
@@ -21,8 +30,7 @@ export const useStyle = makeStyles({
         width: '45%',
         border: 'none',
         borderBottom: '1px solid black',
-        outline: 'none',
-        padding: '5px',
+        outline: 'none'
     },
     textarea: {
         width: '100%',
@@ -35,7 +43,7 @@ export const useStyle = makeStyles({
         backgroundColor: 'inherit',
         fontWeight: 500,
         fontSize: 24,
-        color: 'black',
         margin: ' auto'
-    }    
+    }
+    
 });

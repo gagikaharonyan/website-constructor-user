@@ -1,3 +1,3 @@
 export * from "./Home";
 export * from "./Post";
-export * from "./ContactUS"
+export * from "./ContactUs"

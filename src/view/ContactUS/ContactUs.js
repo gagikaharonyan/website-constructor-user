@@ -8,12 +8,17 @@ function ContactUs(props) {
     const infos = [{type: 'EMAIL', text: 'gassg@gmail.com'},
                     {type: 'PHONE_NUMBER', text: '+374 080 80 80'},
                     {type: 'LOCATION', text: 'Yerevan, Armenia'}]
+    
+    const handleSubmit = (formData) => {
+        console.log(formData)
+    }
+
     return (
         <div className={classes.root}>
-            <span className={classes.caption}>Contact Us</span>
             <div className={classes.container}>
+            {/* <span className={classes.caption}>Contact Us</span> */}
                 <ContactInfos infos={infos}/>
-                <ContactForm/>
+                <ContactForm onSubmit={handleSubmit}/>
             </div>
             
         </div>

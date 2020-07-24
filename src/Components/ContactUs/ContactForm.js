@@ -15,8 +15,14 @@ export function ContactForm(props) {
         setFormData({...formData, [event.target.name]: event.target.value});
     }
 
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        props.onSubmit(formData);
+    }
+
     return (
-        <div className={classes.root} autocomplete="off">
+        <div className={classes.root} autocomplete="off" onSubmit={handleSubmit}>
+            <span className={classes.caption}>Contact us</span>
             <form className={classes.form}>
                 <div className={classes.row}>
                     <input name="name" type="text" className={classes.input} placeholder="Name"
