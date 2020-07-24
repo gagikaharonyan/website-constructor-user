@@ -15,3 +15,9 @@ export const componentTypes = {
     PARAGRAPH: 'PARAGRAPH',
     VIDEO: 'VIDEO'
 }
+
+export const contactInfoTypes = {
+    EMAIL: 'EMAIL',
+    LOCATION: 'LOCATION',
+    PHONE_NUMBER: 'PHONE_NUMBER'
+}

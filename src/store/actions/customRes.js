@@ -9,18 +9,23 @@ const customRes = {
         },
         {
             id: 2,
-            title: 'Page2',
-            url: '/page2'
+            title: 'Posts',
+            url: '/posts'
         },
         {
             id: 3,
-            title: 'page3',
-            url: '/page3'
+            title: 'Events',
+            url: '/events'
         },
         {
             id: 4,
-            title: 'Page4',
-            url: '/page4'
+            title: 'Contact us',
+            url: '/contact'
+        },
+        {
+            id: 4,
+            title: 'About',
+            url: '/about'
         }
     ],
     pages: [

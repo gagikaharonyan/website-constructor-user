@@ -1,1 +1,1 @@
-export {Urls, componentTypes} from './consts';
+export {Urls, componentTypes, contactInfoTypes} from './consts';
