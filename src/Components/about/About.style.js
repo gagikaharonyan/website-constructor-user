@@ -2,7 +2,13 @@ import { makeStyles } from '@material-ui/core';
 
 export const useStyles = makeStyles ({
     '@global': {
-        body: {height:window.innerHeight, overflow: 'hidden'}
+        body: {
+            height:window.innerHeight,
+            overflow: 'hidden',
+            '@media only screen and (max-width:1024px)': {
+                overflow: 'auto'
+            }
+        }
       },
     aboutContainer: {
         width:1024,
@@ -10,10 +16,19 @@ export const useStyles = makeStyles ({
         display: 'flex',
         height: window.innerHeight,
         alignItems: 'center',
-        overflow: 'hidden'
+        overflow: 'hidden',
+        '@media only screen and (max-width:1024px)': {
+            width: '100%',
+            flexDirection: 'column',
+            overflow: 'auto',
+
+        }
     },
     avatar: {
         width:500,
+        '@media only screen and (max-width:1024px)': {
+            width: '100%'
+        }
     },
     aboutDetails: {
         padding:20
