@@ -38,8 +38,6 @@ export const useStyles = makeStyles({
                 fontSize: '6rem',
                 left: '-2rem',
                 top: '-3rem',
-
-
             }
         },
         '& blockquote:after': {
