@@ -2,8 +2,7 @@ import React from "react";
 import {Switch} from 'react-router-dom'
 import {AppRouter} from './Components/AppRouter/AppRouter'
 import UserLayout from "./Components/layouts/UserLayout";
-import {Home, Post, ContactUs} from "./view";
-import { AboutUs } from './view/AboutUs/AboutUs';
+import {Home, Post, ContactUs, AboutUs} from "./view";
 
 export const Routers = () => {
 
