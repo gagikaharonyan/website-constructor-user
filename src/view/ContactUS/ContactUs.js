@@ -1,10 +1,11 @@
 import React from "react";
 import {ContactForm, ContactInfos} from '../../Components/ContactUs';
 import { useStyle } from "./ContactUs.style";
-
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 function ContactUs(props) {
     const classes = useStyle();
+    const matches = useMediaQuery('(max-width:768px)');
     const infos = [{type: 'EMAIL', text: 'gassg@gmail.com'},
                     {type: 'PHONE_NUMBER', text: '+374 080 80 80'},
                     {type: 'LOCATION', text: 'Yerevan, Armenia'}]
@@ -16,9 +17,17 @@ function ContactUs(props) {
     return (
         <div className={classes.root}>
             <div className={classes.container}>
-            {/* <span className={classes.caption}>Contact Us</span> */}
-                <ContactInfos infos={infos}/>
-                <ContactForm onSubmit={handleSubmit}/>
+                {matches
+                ?<>
+                    <ContactInfos infos={infos}/>
+                    <ContactForm onSubmit={handleSubmit}/>
+                 </>
+                :<>
+                    <ContactForm onSubmit={handleSubmit}/>
+                    <div className={classes.border}></div>
+                    <ContactInfos infos={infos}/>
+                </>}
+                
             </div>
             
         </div>

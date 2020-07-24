@@ -1,6 +1,6 @@
  import { makeStyles } from '@material-ui/core/styles';
 
- export const useStyle = makeStyles({
+ export const useStyle = makeStyles(theme => ({
     root: {
         position: 'fixed',
         top: 0,
@@ -15,11 +15,10 @@
         boxShadow: '0px 0px 9px 3px rgba(41,41,41,.25)',
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'flex-start',
+        justifyContent: 'space-between',
         alignItems: 'center',
     },
     appLogo: {
-        width: '20%',
         whiteSpace: 'nowrap',
         marginLeft: 10,
         '& span:first-child': {
@@ -30,6 +29,9 @@
         }
     },
     navLinks: {
-        flex: 5,
+        
+    },
+    search: {
+       
     }
- })
+ }));

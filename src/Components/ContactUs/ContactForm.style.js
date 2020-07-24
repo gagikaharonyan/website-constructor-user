@@ -1,16 +1,19 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-export const useStyle = makeStyles({
+export const useStyle = makeStyles(theme => ({
     root: {
         width: 600,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        padding: '40px 50px'
+        padding: '40px 50px',
+        '@media only screen and (max-width:768px)': {
+           width: '100%',
+        }
     },
     caption: {
-        fontSize: 26,
-        color: 'black',
+        fontSize: 32,
+        fontWeight: 700,
         marginBottom: 20,
     },
     form: {
@@ -24,13 +27,22 @@ export const useStyle = makeStyles({
         width: '100%',
         display: 'flex',
         justifyContent: 'space-between',
-        marginBottom: '30px'
+        marginBottom: '30px',
+        '@media only screen and (max-width:768px)': {
+            flexDirection: 'column',
+            margin: 0,
+        }
     },
     input: {
         width: '45%',
         border: 'none',
         borderBottom: '1px solid black',
-        outline: 'none'
+        backgroundColor: 'inherit',
+        outline: 'none',
+        '@media only screen and (max-width:768px)': {
+            width: '100%',
+            marginBottom: '50px',
+        },
     },
     textarea: {
         width: '100%',
@@ -41,9 +53,11 @@ export const useStyle = makeStyles({
     submitButton: {
         border: 'none',
         backgroundColor: 'inherit',
-        fontWeight: 500,
+        fontWeight: 700,
         fontSize: 24,
-        margin: ' auto'
-    }
-    
-});
+        margin: ' auto',
+        '&:hover': {
+            color: 'black',
+        }
+    } 
+}));

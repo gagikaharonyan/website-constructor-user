@@ -23,7 +23,7 @@ export function ContactForm(props) {
     return (
         <div className={classes.root} autocomplete="off" onSubmit={handleSubmit}>
             <span className={classes.caption}>Contact us</span>
-            <form className={classes.form}>
+            <form className={classes.form} autoComplete="off">
                 <div className={classes.row}>
                     <input name="name" type="text" className={classes.input} placeholder="Name"
                         value={formData.name} onChange={oninput} maxLength="20" required></input>
