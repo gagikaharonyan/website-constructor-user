@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
         padding: '3px 10px',
 
             '&:focus': {
-                backgroungColor: 'red !important'
+                backgroundColor: 'redgit'
             }
         
     },

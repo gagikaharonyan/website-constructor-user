@@ -35,7 +35,7 @@ export const posts = [
         imgUrl: 'https://ychef.files.bbci.co.uk/464x261/p08lmqx7.jpg',
         category: 'Sport',
         title: 'The upsides of being angry',
-        description: 'We are taught that anger is born from aggression, and destructive. But can it – in moderation, and directed the right way – also be good for us?',
+        description: 'We are taught that anger is born from aggression, and destructive. But can it – in mo taught that anger isd the right way – also be good for us?',
         dateCreated: '24th July 2020'
     },
     {
