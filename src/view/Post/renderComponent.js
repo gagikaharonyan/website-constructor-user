@@ -2,7 +2,7 @@ import React from'react';
 import uuid from 'react-uuid';
 import {componentTypes as type} from '../../constants';
 
-import Slide from '../../Components/post/slide';
+import Slide from '../../Components/Slide';
 import Heading from '../../Components/post/heading';
 import Photo from '../../Components/post/photo';
 import Paragraph from '../../Components/post/paragraph';

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import {Container, Row} from 'react-bootstrap';
-import Header from "../header/header"
+import Header from "../Header"
 import {connect} from "react-redux";
 import {fetchSite} from "../../store/actions/site";
 
@@ -18,14 +18,12 @@ const UserLayout = (props) => {
         loadSite();
     }, [])
 
-    return (
-        <Container fluid={true} className={classes.mainContainer}>
-            <Row style={{display: 'block'}}>
-                <Header/>
-            </Row>
-            {props.children}
-        </Container>
-    )
+    return (<>
+                <Row>
+                    <Header/>
+                </Row>
+                {props.children}
+            </>)
 }
 
 const mapStateToProps = (state) => ({

@@ -15,7 +15,6 @@ export const useStyle = makeStyles(theme => ({
     container: {
         display: 'flex',
         flexDirection: 'row',
-        marginTop: 20,
         '@media only screen and (max-width:768px)': {
             width: '100%',
             flexDirection: 'column',

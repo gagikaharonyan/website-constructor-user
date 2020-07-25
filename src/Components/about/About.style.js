@@ -1,15 +1,6 @@
 import { makeStyles } from '@material-ui/core';
 
 export const useStyles = makeStyles ({
-    '@global': {
-        body: {
-            height:window.innerHeight,
-            overflow: 'hidden',
-            '@media only screen and (max-width:1024px)': {
-                overflow: 'auto'
-            }
-        }
-      },
     aboutContainer: {
         width:1024,
         margin:'auto',

@@ -28,3 +28,91 @@ export const post  =  [
         text: 'Going to the mountains is like going home.'
     }
 ]
+
+export const posts = [
+    {
+        id: 1,
+        imgUrl: 'https://ychef.files.bbci.co.uk/464x261/p08lmqx7.jpg',
+        category: 'Sport',
+        title: 'The upsides of being angry',
+        description: 'We are taught that anger is born from aggression, and destructive. But can it – in moderation, and directed the right way – also be good for us?',
+        dateCreated: '24th July 2020'
+    },
+    {
+        id: 2,
+        imgUrl: 'https://ychef.files.bbci.co.uk/464x261/p08lmqx7.jpg',
+        category: 'Future',
+        title: 'The upsides of being angry',
+        description: 'We are taught that anger is born from aggression, and destructive. But can it – in moderation, and directed the right way – also be good for us?',
+        dateCreated: '24th July 2020'
+    },
+    {
+        id: 3,
+        imgUrl: 'https://ychef.files.bbci.co.uk/464x261/p08lmqx7.jpg',
+        category: 'Travel',
+        title: 'The upsides of being angry',
+        description: 'We are taught that anger is born from aggression, and destructive. But can it – in moderation, and directed the right way – also be good for us?',
+        dateCreated: '24th July 2020'
+    },
+    {
+        id: 4,
+        imgUrl: 'https://ychef.files.bbci.co.uk/464x261/p08lmqx7.jpg',
+        category: 'Future',
+        title: 'The upsides of being angry',
+        description: 'We are taught that anger is born from aggression, and destructive. But can it – in moderation, and directed the right way – also be good for us?',
+        dateCreated: '24th July 2020'
+    },
+    {
+        id: 5,
+        imgUrl: 'https://ychef.files.bbci.co.uk/464x261/p08lmqx7.jpg',
+        category: 'Travel',
+        title: 'The upsides of being angry',
+        description: 'We are taught that anger is born from aggression, and destructive. But can it – in moderation, and directed the right way – also be good for us?',
+        dateCreated: '24th July 2020'
+    },
+    {
+        id: 6,
+        imgUrl: 'https://ychef.files.bbci.co.uk/464x261/p08lmqx7.jpg',
+        category: 'Future',
+        title: 'The upsides of being angry',
+        description: 'We are taught that anger is born from aggression, and destructive. But can it – in moderation, and directed the right way – also be good for us?',
+        dateCreated: '24th July 2020'
+    },
+
+    {
+        id: 7,
+        imgUrl: 'https://ychef.files.bbci.co.uk/464x261/p08lmqx7.jpg',
+        category: 'Travel',
+        title: 'The upsides of being angry',
+        description: 'We are taught that anger is born from aggression, and destructive. But can it – in moderation, and directed the right way – also be good for us?',
+        dateCreated: '24th July 2020'
+    },
+    {
+        id: 8,
+        imgUrl: 'https://ychef.files.bbci.co.uk/464x261/p08lmqx7.jpg',
+        category: 'Future',
+        title: 'The upsides of being angry',
+        description: 'We are taught that anger is born from aggression, and destructive. But can it – in moderation, and directed the right way – also be good for us?',
+        dateCreated: '24th July 2020'
+    },
+    {
+        id: 9,
+        imgUrl: 'https://ychef.files.bbci.co.uk/464x261/p08lmqx7.jpg',
+        category: 'Music',
+        title: 'The upsides of being angry',
+        description: 'We are taught that anger is born from aggression, and destructive. But can it – in moderation, and directed the right way – also be good for us?',
+        dateCreated: '24th July 2020'
+    },
+    {
+        id: 10,
+        imgUrl: 'https://ychef.files.bbci.co.uk/464x261/p08lmqx7.jpg',
+        category: 'Future',
+        title: 'The upsides of being angry',
+        description: 'We are taught that anger is born from aggression, and destructive. But can it – in moderation, and directed the right way – also be good for us?',
+        dateCreated: '24th July 2020'
+    },
+]
+
+export const categories = [
+    'Travel', 'Sport', 'Worklife', 'Music', 'Culture', 'Future',
+]

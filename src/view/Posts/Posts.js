@@ -1,7 +1,32 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import {posts as _posts, categories} from '../../customs';
+import {PostCard} from '../../Components/posts';
+import {useStyle} from './Posts.style';
+import Chips from '../../Components/Chips/Chips'
 
 function Posts(props) {
-    return <h1>posts</h1>
+    const classes = useStyle();
+    const [isLoading, setIsLoading] = useState(true);
+    const [posts, setPosts] = useState(_posts);
+    const [sortedPosts, setSortedPosts] = useState(_posts);
+    setTimeout(() => {
+        setIsLoading(false)
+    }, 1000)
+
+    const handleOnSetActiveChips = (activeChips) => {
+        setSortedPosts((activeChips.length === 0) ? posts : posts.filter(post => activeChips.includes(post.category)));
+    }
+
+    return (
+        <div className={'page '}>
+            <div className={'page-width-container ' + classes.postsContainer}>
+            <div className={classes.chips}>
+                <Chips src={categories} onSetActiveChips={handleOnSetActiveChips}></Chips>
+            </div>
+                {sortedPosts.map(post => <PostCard src={post} loading={isLoading}></PostCard>)}
+            </div>
+        </div>
+    );
 }
 
 export default Posts

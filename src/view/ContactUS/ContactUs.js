@@ -1,5 +1,5 @@
 import React from "react";
-import {ContactForm, ContactInfos} from '../../Components/ContactUs';
+import {ContactForm, ContactInfos} from '../../Components/contactUs';
 import { useStyle } from "./ContactUs.style";
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
@@ -15,7 +15,7 @@ function ContactUs(props) {
     }
 
     return (
-        <div className={classes.root}>
+        <div className={'page ' + classes.root}>
             <div className={classes.container}>
                 {matches
                 ?<>

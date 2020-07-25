@@ -1,0 +1,43 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: "'Karla', sans-serif";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page {
+  width: 100%;
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
+
+
+.page-width-container {
+  width: 1280px;
+}
+.MuiChip-outlined, .MuiChip-clickable:focus {
+  background-color: brown;
+}
+
+@media only screen and (max-width: 1280px) {
+  .page {
+   
+  }
+  
+  .page-width-container {
+    width: 100%;
+  }
+  
+}
