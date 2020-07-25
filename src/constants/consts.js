@@ -13,7 +13,10 @@ export const componentTypes = {
     HEADING: 'HEADING',
     PHOTO: 'PHOTO',
     PARAGRAPH: 'PARAGRAPH',
-    VIDEO: 'VIDEO'
+    VIDEO: 'VIDEO',
+    LOCATION: 'LOCATION',
+    TIMER: 'TIMER',
+    SUBSCRIBE: 'SUBSCRIBE',
 }
 
 export const contactInfoTypes = {
