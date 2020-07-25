@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Chip from '@material-ui/core/Chip';
+import {Chip} from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -16,16 +16,23 @@ const useStyles = makeStyles((theme) => ({
             flexWrap: 'nowrap',
             flexDirection: 'row',
             overflow: 'auto',
-           },
+        },
+        '& ․MuiChip-clickable': {
+            '&:focus': {
+                backgroundColor: 'white'
+            }
+          },
+          '& .MuiChip-outlined': {
+            '&:focus': {
+                backgroundColor: 'white'
+            }
+          },
+
     },
+    
     chip: {
         fontSize: 15,
         padding: '3px 10px',
-
-            '&:focus': {
-                backgroungColor: 'red !important'
-            }
-        
     },
 }));
 

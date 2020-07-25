@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import {Container, Row} from 'react-bootstrap';
-import Header from "../Header"
+import Header from "../header/Header";
 import {connect} from "react-redux";
 import {fetchSite} from "../../store/actions/site";
 
