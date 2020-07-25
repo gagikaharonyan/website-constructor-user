@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from "react";
+import {Link} from 'react-router-dom';
+
 import {posts as _posts, categories} from '../../customs';
 import {PostCard} from '../../Components/posts';
 import {useStyle} from './Posts.style';
@@ -18,12 +20,16 @@ function Posts(props) {
     }
 
     return (
-        <div className={'page '}>
+        <div className={'page'}>
             <div className={'page-width-container ' + classes.postsContainer}>
             <div className={classes.chips}>
                 <Chips src={categories} onSetActiveChips={handleOnSetActiveChips}></Chips>
             </div>
-                {sortedPosts.map(post => <PostCard src={post} loading={isLoading}></PostCard>)}
+                {sortedPosts.map(post => 
+                    <Link to={`post/${post.title}`}>
+                        <PostCard src={post} loading={isLoading}></PostCard>
+                    </Link>
+                )}
             </div>
         </div>
     );
