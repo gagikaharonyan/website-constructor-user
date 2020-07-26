@@ -115,6 +115,12 @@ export const posts = [
 
 export const categories = [
     'Travel', 'Sport', 'Worklife', 'Music', 'Culture', 'Future',
+];
+
+export const homeSlide  = [
+    'https://s18053.pcdn.co/wp-content/uploads/2019/11/Lincoln-woods-reflection-3-1800x500.jpg', 
+    'https://www.rupertsoskin.com/uploads/banner3_1463228887.jpg',
+    'https://ardenetvous.com/wp-content/uploads/2020/01/fagnes_celine_lecomte-e1579856401849-1800x500.jpg',
 ]
 
 export const event = [
@@ -153,7 +159,7 @@ export const event = [
 export const events = [
     {
         id: 1,
-        title: 'El classico - Real Madrid vs FCMadrid vs FCMadrid vs FCMadrid vs FCMadrid vs FCMadrid vs FCMadrid vs FCMadrid vs FC Barcelona',
+        title: 'El classico - Real Madrid vs FC Barcelona',
         imgUrl: 'https://as00.epimg.net/img/les/20200229/dea084f2530b36689bdb17e63b4f198f/69d914a4ff7cb78c31abd19e73eba0ca_720.png',
         description: 'Come to watch real football!! The full package costs 2995 euro. It ie to watch real football!! The full package costs 2995 euro. It ie to watch real football!! The full package costs 2995 euro. It ie to watch real football!! The full package costs 2995 euro. It ie to watch real football!! The full package costs 2995 euro. It ie to watch real football!! The full package costs 2995 euro. It ie to watch real football!! The full package costs 2995 euro. It ie to watch real football!! The full package costs 2995 euro. It includes Round trip flights (economy class) to Spain from major airports in the U.S. and Canada, 5 days/4 nights in a 4 star hotel, Guided tour of important city monuments, Daily breakfasts, Taxes included',
         location: 'Barcelona, Camp Nna, Camp Nna, Camp Nna, Camp Nna, Camp Nna, Camp Nna, Camp Nna, Camp Nna, Camp Nna, Camp Nou',

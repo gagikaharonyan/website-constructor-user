@@ -4,6 +4,7 @@ export const useStyles = makeStyles({
     sliderContainer: {
         width: 800,
         marginBottom: 40,
+        zIndex:0,
         '& .awssld__bullets': {
             '& .awssld__bullets--active': {
                 transform: 'scale(0.6)',

@@ -6,14 +6,15 @@ import {Link} from 'react-router-dom';
 import { useStyles } from './Events.style';
 
 function Events(props) {
+
     const _events = events;
     const classes = useStyles();
     const [isLoading, setIsLoading] = useState(true);
 
+
     setTimeout(() => {
         setIsLoading(false);
     }, 1000)
-
    
     return (
         <div className={`page page-width-container ${classes.root}`}>

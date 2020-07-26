@@ -22,9 +22,9 @@ function Posts(props) {
     return (
         <div className={'page'}>
             <div className={'page-width-container ' + classes.postsContainer}>
-            <div className={classes.chips}>
-                <Chips src={categories} onSetActiveChips={handleOnSetActiveChips}></Chips>
-            </div>
+                <div className={classes.chips}>
+                    <Chips src={categories} onSetActiveChips={handleOnSetActiveChips}></Chips>
+                </div>
                 {sortedPosts.map(post => 
                     <Link to={`post/${post.title}`}>
                         <PostCard src={post} loading={isLoading}></PostCard>
