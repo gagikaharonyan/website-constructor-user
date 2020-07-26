@@ -27,9 +27,7 @@ const useStyles = makeStyles((theme) => ({
                 backgroundColor: 'white'
             }
           },
-
     },
-    
     chip: {
         fontSize: 15,
         padding: '3px 10px',

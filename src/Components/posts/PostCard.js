@@ -21,7 +21,7 @@ export function PostCard(props) {
               title={src.title}
             ></CardMedia>
           )}
-          <CardContent>
+          <CardContent className={classes.content}>
             {loading ? (
               <>
                 <Skeleton animation="wave" height={10} style={{ marginBottom: 15, width: "50%" }} />
@@ -36,8 +36,8 @@ export function PostCard(props) {
               <Typography variant="body3" color="textSecondary" component="p">{src.category}</Typography>
               <Typography variant="body3" color="textSecondary" component="p">{src.dateCreated}</Typography>
             </div>
-              <Typography variant="h6" color="textPrimary" component="p">{src.title}</Typography>
-              <Typography variant="body2" color="textSecondary" component="p">{src.description}</Typography>
+              <Typography className={classes.title} variant="h6" color="textPrimary" component="p">{src.title}</Typography>
+              <Typography className={classes.description} variant="body2" color="textSecondary" component="p">{src.description}</Typography>
             </>)}
           </CardContent>
         </Card>

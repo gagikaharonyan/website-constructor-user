@@ -11,7 +11,7 @@ import SearchIcon from '@material-ui/icons/Search';
 function Header(props) {
     const {site} = props;
     const classes = useStyle();
-
+    
     return(
         <div className={classes.root}>
             <Link className={classes.appLogo} to='/'>
@@ -19,7 +19,7 @@ function Header(props) {
                 <span>Constructor</span>
             </Link>        
             { site.isLoaded
-            ?<NavBar className={classes.navLinks} links={site.data.headerPages}></NavBar>
+            ?<NavBar className={classes.navLinks} links={site.data.headerPages} pathname={props.location.pathname}></NavBar>
             : '' }
             <TextField
                 style={{margin: '0 50px 0 20px'}}
