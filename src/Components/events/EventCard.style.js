@@ -15,11 +15,11 @@ export const useStyle = makeStyles(theme => ({
          }
     },
     imgContainer: {
-        flex: 1.7,
+        flex: 1.2,
     },
     content: {
         flex: 1,
-        marginLeft: 60,
+        marginLeft: գի0,
         padding: 20,
         '@media only screen and (max-width:768px)': {
             margin: 10,
