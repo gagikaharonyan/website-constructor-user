@@ -1,18 +1,17 @@
 import React from "react";
-import {event} from '../../customs';
-import renderComponent from './renderComponent';
+import {events} from '../../customs';
 
 import { useStyles } from './Events.style';
 
 function Events(props) {
-    const _event = event;
+    const _events = events;
     const classes = useStyles();
 
-    console.log(_event)
+    console.log(_events)
     return (
         <div className={`page ${classes.eventsContainer} `}>
             {/* <div className={classes.eventsContainer}> */}
-                {_event.map(renderComponent)}
+                <h1>ՄԻջՈՑԱՌՈՒՄՆԵՐ</h1>
 
             {/* </div> */}
         </div>

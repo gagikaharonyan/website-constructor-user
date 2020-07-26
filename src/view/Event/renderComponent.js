@@ -1,10 +1,10 @@
 import React from'react';
 import uuid from 'react-uuid';
 import {componentTypes as type} from '../../constants';
-import {Timer} from '../../Components/events/Timer';
-import { Slide } from '../../Components/events/Slide';
-import { Location } from '../../Components/events/Location';
-import { Subscribe } from '../../Components/events/SubscribeForm';
+import {Timer} from '../../Components/event/Timer';
+import { Slide } from '../../Components/event/Slide';
+import { Location } from '../../Components/event/Location';
+import { Subscribe } from '../../Components/event/SubscribeForm';
 import Heading from '../../Components/post/heading'
 
 const renderComponent = (component) => {
