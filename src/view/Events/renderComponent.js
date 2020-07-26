@@ -4,6 +4,7 @@ import {componentTypes as type} from '../../constants';
 import {Timer} from '../../Components/events/Timer';
 import { Slide } from '../../Components/events/Slide';
 import { Location } from '../../Components/events/Location';
+import { Subscribe } from '../../Components/events/SubscribeForm';
 import Heading from '../../Components/post/heading'
 
 const renderComponent = (component) => {
@@ -21,7 +22,7 @@ const renderComponent = (component) => {
         case type.SLIDE:
             return <Slide key={uuid()} />
         case type.SUBSCRIBE:
-            return <h1>SUBSCRIBE </h1>
+            return <Subscribe invitationText={component.invitationText}></Subscribe>
         case type.PHOTO:
             return <h1>Photo </h1>
         default:
