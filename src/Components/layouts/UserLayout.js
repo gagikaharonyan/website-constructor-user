@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import {Container, Row} from 'react-bootstrap';
-import Header from "../Header/Header";
+import Header from "../Header";
+import Footer from "../Footer"
 import {connect} from "react-redux";
 import {fetchSite} from "../../store/actions/site";
 
@@ -18,12 +19,11 @@ const UserLayout = (props) => {
         loadSite();
     }, [])
 
-    return (<>
-                <Row>
-                    <Header/>
-                </Row>
+    return (<div className={classes.App}>
+                <Header/>
                 {props.children}
-            </>)
+                <Footer/>
+            </div>)
 }
 
 const mapStateToProps = (state) => ({

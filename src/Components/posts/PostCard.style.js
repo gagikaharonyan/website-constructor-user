@@ -9,7 +9,13 @@ export const useStyle = makeStyles({
     media: {
         height: 190
     },
-    contentHeader: {
-        
+    content: {
+        height: 190,
+        overflow: 'hidden',
+    },
+    title: {
+        maxHeight: 70,
+        overflow: 'hidden',
     }
+
 })
