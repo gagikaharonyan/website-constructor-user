@@ -117,7 +117,6 @@ export const categories = [
     'Travel', 'Sport', 'Worklife', 'Music', 'Culture', 'Future',
 ]
 
-
 export const event = [
     {
         type: 'HEADING',
@@ -149,4 +148,128 @@ export const event = [
         invitationText: 'Subscribe to know all the news about Real Madrid and Barcelona first!!!',
 
     }
+]
+
+export const events = [
+    {
+        id: 1,
+        title: 'El classico - Real Madrid vs FC Barcelona',
+        imgUrl: 'https://as00.epimg.net/img/les/20200229/dea084f2530b36689bdb17e63b4f198f/69d914a4ff7cb78c31abd19e73eba0ca_720.png',
+        description: 'Come to watch real football!! The full package costs 2995 euro. It includes Round trip flights (economy class) to Spain from major airports in the U.S. and Canada, 5 days/4 nights in a 4 star hotel, Guided tour of important city monuments, Daily breakfasts, Taxes included',
+        location: 'Barcelona, Camp Nou',
+        date: '24th July 2020',
+    },
+    {
+        id: 2,
+        title: 'El classico - Real Madrid vs FC Barcelona',
+        imgUrl: 'https://as00.epimg.net/img/les/20200229/dea084f2530b36689bdb17e63b4f198f/69d914a4ff7cb78c31abd19e73eba0ca_720.png',
+        description: 'Come to watch real football!! The full package costs 2995 euro. It includes Round trip flights (economy class) to Spain from major airports in the U.S. and Canada, 5 days/4 nights in a 4 star hotel, Guided tour of important city monuments, Daily breakfasts, Taxes included',
+        location: 'Barcelona, Camp Nou',
+        date: '24th July 2020',
+    },
+    {
+        id: 3,
+        title: 'El classico - Real Madrid vs FC Barcelona',
+        imgUrl: 'https://as00.epimg.net/img/les/20200229/dea084f2530b36689bdb17e63b4f198f/69d914a4ff7cb78c31abd19e73eba0ca_720.png',
+        description: 'Come to watch real football!! The full package costs 2995 euro. It includes Round trip flights (economy class) to Spain from major airports in the U.S. and Canada, 5 days/4 nights in a 4 star hotel, Guided tour of important city monuments, Daily breakfasts, Taxes included',
+        location: 'Barcelona, Camp Nou',
+        date: '24th July 2020',
+    },
+    {
+        id: 4,
+        title: 'El classico - Real Madrid vs FC Barcelona',
+        imgUrl: 'https://as00.epimg.net/img/les/20200229/dea084f2530b36689bdb17e63b4f198f/69d914a4ff7cb78c31abd19e73eba0ca_720.png',
+        description: 'Come to watch real football!! The full package costs 2995 euro. It includes Round trip flights (economy class) to Spain from major airports in the U.S. and Canada, 5 days/4 nights in a 4 star hotel, Guided tour of important city monuments, Daily breakfasts, Taxes included',
+        location: 'Barcelona, Camp Nou',
+        date: '24th July 2020',
+    },
+    {
+        id: 5,
+        title: 'El classico - Real Madrid vs FC Barcelona',
+        imgUrl: 'https://as00.epimg.net/img/les/20200229/dea084f2530b36689bdb17e63b4f198f/69d914a4ff7cb78c31abd19e73eba0ca_720.png',
+        description: 'Come to watch real football!! The full package costs 2995 euro. It includes Round trip flights (economy class) to Spain from major airports in the U.S. and Canada, 5 days/4 nights in a 4 star hotel, Guided tour of important city monuments, Daily breakfasts, Taxes included',
+        location: 'Barcelona, Camp Nou',
+        date: '24th July 2020',
+    },
+    {
+        id: 6,
+        title: 'El classico - Real Madrid vs FC Barcelona',
+        imgUrl: 'https://as00.epimg.net/img/les/20200229/dea084f2530b36689bdb17e63b4f198f/69d914a4ff7cb78c31abd19e73eba0ca_720.png',
+        description: 'Come to watch real football!! The full package costs 2995 euro. It includes Round trip flights (economy class) to Spain from major airports in the U.S. and Canada, 5 days/4 nights in a 4 star hotel, Guided tour of important city monuments, Daily breakfasts, Taxes included',
+        location: 'Barcelona, Camp Nou',
+        date: '24th July 2020',
+    },
+    {
+        id: 7,
+        title: 'El classico - Real Madrid vs FC Barcelona',
+        imgUrl: 'https://as00.epimg.net/img/les/20200229/dea084f2530b36689bdb17e63b4f198f/69d914a4ff7cb78c31abd19e73eba0ca_720.png',
+        description: 'Come to watch real football!! The full package costs 2995 euro. It includes Round trip flights (economy class) to Spain from major airports in the U.S. and Canada, 5 days/4 nights in a 4 star hotel, Guided tour of important city monuments, Daily breakfasts, Taxes included',
+        location: 'Barcelona, Camp Nou',
+        date: '24th July 2020',
+    },
+    {
+        id: 8,
+        title: 'El classico - Real Madrid vs FC Barcelona',
+        imgUrl: 'https://as00.epimg.net/img/les/20200229/dea084f2530b36689bdb17e63b4f198f/69d914a4ff7cb78c31abd19e73eba0ca_720.png',
+        description: 'Come to watch real football!! The full package costs 2995 euro. It includes Round trip flights (economy class) to Spain from major airports in the U.S. and Canada, 5 days/4 nights in a 4 star hotel, Guided tour of important city monuments, Daily breakfasts, Taxes included',
+        location: 'Barcelona, Camp Nou',
+        date: '24th July 2020',
+    },
+    {
+        id: 9,
+        title: 'El classico - Real Madrid vs FC Barcelona',
+        imgUrl: 'https://as00.epimg.net/img/les/20200229/dea084f2530b36689bdb17e63b4f198f/69d914a4ff7cb78c31abd19e73eba0ca_720.png',
+        description: 'Come to watch real football!! The full package costs 2995 euro. It includes Round trip flights (economy class) to Spain from major airports in the U.S. and Canada, 5 days/4 nights in a 4 star hotel, Guided tour of important city monuments, Daily breakfasts, Taxes included',
+        location: 'Barcelona, Camp Nou',
+        date: '24th July 2020',
+    },
+    {
+        id: 10,
+        title: 'El classico - Real Madrid vs FC Barcelona',
+        imgUrl: 'https://as00.epimg.net/img/les/20200229/dea084f2530b36689bdb17e63b4f198f/69d914a4ff7cb78c31abd19e73eba0ca_720.png',
+        description: 'Come to watch real football!! The full package costs 2995 euro. It includes Round trip flights (economy class) to Spain from major airports in the U.S. and Canada, 5 days/4 nights in a 4 star hotel, Guided tour of important city monuments, Daily breakfasts, Taxes included',
+        location: 'Barcelona, Camp Nou',
+        date: '24th July 2020',
+    },
+    {
+        id: 11,
+        title: 'El classico - Real Madrid vs FC Barcelona',
+        imgUrl: 'https://as00.epimg.net/img/les/20200229/dea084f2530b36689bdb17e63b4f198f/69d914a4ff7cb78c31abd19e73eba0ca_720.png',
+        description: 'Come to watch real football!! The full package costs 2995 euro. It includes Round trip flights (economy class) to Spain from major airports in the U.S. and Canada, 5 days/4 nights in a 4 star hotel, Guided tour of important city monuments, Daily breakfasts, Taxes included',
+        location: 'Barcelona, Camp Nou',
+        date: '24th July 2020',
+    },
+    {
+        id: 12,
+        title: 'El classico - Real Madrid vs FC Barcelona',
+        imgUrl: 'https://as00.epimg.net/img/les/20200229/dea084f2530b36689bdb17e63b4f198f/69d914a4ff7cb78c31abd19e73eba0ca_720.png',
+        description: 'Come to watch real football!! The full package costs 2995 euro. It includes Round trip flights (economy class) to Spain from major airports in the U.S. and Canada, 5 days/4 nights in a 4 star hotel, Guided tour of important city monuments, Daily breakfasts, Taxes included',
+        location: 'Barcelona, Camp Nou',
+        date: '24th July 2020',
+    },
+    {
+        id: 13,
+        title: 'El classico - Real Madrid vs FC Barcelona',
+        imgUrl: 'https://as00.epimg.net/img/les/20200229/dea084f2530b36689bdb17e63b4f198f/69d914a4ff7cb78c31abd19e73eba0ca_720.png',
+        description: 'Come to watch real football!! The full package costs 2995 euro. It includes Round trip flights (economy class) to Spain from major airports in the U.S. and Canada, 5 days/4 nights in a 4 star hotel, Guided tour of important city monuments, Daily breakfasts, Taxes included',
+        location: 'Barcelona, Camp Nou',
+        date: '24th July 2020',
+    },
+    {
+        id: 14,
+        title: 'El classico - Real Madrid vs FC Barcelona',
+        imgUrl: 'https://as00.epimg.net/img/les/20200229/dea084f2530b36689bdb17e63b4f198f/69d914a4ff7cb78c31abd19e73eba0ca_720.png',
+        description: 'Come to watch real football!! The full package costs 2995 euro. It includes Round trip flights (economy class) to Spain from major airports in the U.S. and Canada, 5 days/4 nights in a 4 star hotel, Guided tour of important city monuments, Daily breakfasts, Taxes included',
+        location: 'Barcelona, Camp Nou',
+        date: '24th July 2020',
+    },
+    {
+        id: 15,
+        title: 'El classico - Real Madrid vs FC Barcelona',
+        imgUrl: 'https://as00.epimg.net/img/les/20200229/dea084f2530b36689bdb17e63b4f198f/69d914a4ff7cb78c31abd19e73eba0ca_720.png',
+        description: 'Come to watch real football!! The full package costs 2995 euro. It includes Round trip flights (economy class) to Spain from major airports in the U.S. and Canada, 5 days/4 nights in a 4 star hotel, Guided tour of important city monuments, Daily breakfasts, Taxes included',
+        location: 'Barcelona, Camp Nou',
+        date: '24th July 2020',
+    },
+
 ]

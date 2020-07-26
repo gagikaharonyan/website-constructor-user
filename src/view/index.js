@@ -3,4 +3,5 @@ export * from "./Post";
 export * from "./ContactUs";
 export * from "./AboutUs";
 export * from "./Posts";
+export * from "./Event";
 export * from "./Events";
