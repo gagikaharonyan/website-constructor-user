@@ -18,10 +18,11 @@ function Slide (props) {
 
   const classes = useStyles();
   const slider = (
-    <AutoplaySlider animation="cubeAnimation"
+    <AutoplaySlider animation="scaleOutAnimation"
       play={true}
       cancelOnInteraction={false} // should stop playing on user interaction
       interval={20000}
+      
     >
       <div data-src="https://as00.epimg.net/img/les/20200229/dea084f2530b36689bdb17e63b4f198f/69d914a4ff7cb78c31abd19e73eba0ca_720.png" />
       <div data-src="https://as01.epimg.net/en/imagenes/2020/02/28/football/1582900958_522512_1582901120_noticia_normal_recorte1.jpg" />
