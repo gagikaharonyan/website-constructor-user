@@ -6,15 +6,12 @@ import { useStyles } from './Events.style';
 
 function Events(props) {
     const _event = event;
-    const classes = useStyles();
+    const classes = useStyles(); 
 
     console.log(_event)
     return (
         <div className={`page ${classes.eventsContainer} `}>
-            {/* <div className={classes.eventsContainer}> */}
-                {_event.map(renderComponent)}
-
-            {/* </div> */}
+            {_event.map(renderComponent)}
         </div>
     );
 }
