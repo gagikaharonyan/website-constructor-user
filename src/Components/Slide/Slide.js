@@ -1,6 +1,5 @@
 import React from 'react';
 import uuid from 'react-uuid';
-
 import Carousel from 'react-material-ui-carousel';
 
 import SlideImage from './SlideImage';

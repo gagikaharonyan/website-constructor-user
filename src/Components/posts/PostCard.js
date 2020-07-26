@@ -19,7 +19,7 @@ export function PostCard(props) {
               className={classes.media}
               image={src.imgUrl}
               title={src.title}
-            />
+            ></CardMedia>
           )}
           <CardContent>
             {loading ? (

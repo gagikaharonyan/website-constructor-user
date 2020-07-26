@@ -20,7 +20,7 @@ const renderComponent = (component) => {
                         key={uuid()} 
                     />
         case type.SLIDE:
-            return <Slide key={uuid()} />
+            return <Slide src={component.src} key={uuid()} />
         case type.SUBSCRIBE:
             return <Subscribe invitationText={component.invitationText}></Subscribe>
         case type.PHOTO:
