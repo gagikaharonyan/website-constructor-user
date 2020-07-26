@@ -1,7 +1,7 @@
 import React from'react';
 import uuid from 'react-uuid';
 import {componentTypes as type} from '../../constants';
-import {Timer} from '../../Components/events';
+import {Timer, Subscribe} from '../../Components/events';
 
 const renderComponent = (component) => {
     switch (component.type) {
