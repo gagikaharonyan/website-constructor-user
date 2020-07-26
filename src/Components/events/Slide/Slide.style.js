@@ -45,8 +45,20 @@ export const useStyles = makeStyles({
             }
         },
         '& .awssld__timer':{
-            // backgroundColor: 'transparent',
+            backgroundColor: 'transparent!important',
             height:0
+        },
+        '& .awssld__timer--run':{
+            backgroundColor: 'transparent!important',
+        },
+        '& .awssld__timer--animated':{
+            backgroundColor: 'transparent!important',
+
+        },
+        '& .awssld__timer--fast':{
+            backgroundColor: 'transparent!important',
+
         }
+
     },
 })
