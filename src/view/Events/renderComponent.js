@@ -1,22 +1,29 @@
 import React from'react';
 import uuid from 'react-uuid';
 import {componentTypes as type} from '../../constants';
-import {Timer, Subscribe} from '../../Components/events';
+import {Timer} from '../../Components/events/Timer';
+import { Slide } from '../../Components/events/Slide';
+import { Location } from '../../Components/events/Location';
+import Heading from '../../Components/post/heading'
 
 const renderComponent = (component) => {
     switch (component.type) {
         case type.HEADING:
-            return <h1>heading</h1>
+            return <Heading text={component.text} />
         case type.TIMER:
-            return <Timer></Timer>
+            return <Timer key={uuid()}></Timer>
         case type.LOCATION:
-            return <h1>Locatio </h1>
+            return <Location 
+                        location={component.location} 
+                        address={component.address} 
+                        key={uuid()} 
+                    />
         case type.SLIDE:
-            return <h1>Slide </h1>
+            return <Slide key={uuid()} />
         case type.SUBSCRIBE:
             return <h1>SUBSCRIBE </h1>
         case type.PHOTO:
-            
+            return <h1>Photo </h1>
         default:
             return 
     }
