@@ -15,18 +15,23 @@ export const useStyle = makeStyles(theme => ({
          }
     },
     imgContainer: {
-        flex: 1.2,
+        flex: 1,
     },
+    image: {
+        width: '100%',
+        height: '100%',
+        backgroundSize: 'cover',
+    },  
     content: {
         flex: 1,
-        marginLeft: գի0,
+        marginLeft: 0,
         padding: 20,
         '@media only screen and (max-width:768px)': {
             margin: 10,
          }
     },
     title: {
-        height: '25%',
+        minHeight: '15%',
         display: 'inline-block',
         fontSize: '25px',
         overflow: 'hidden',

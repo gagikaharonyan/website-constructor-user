@@ -8,13 +8,8 @@ function About () {
 
     return (
       <div className={classes.aboutContainer}>
-         <div className={classes.image}>
-           <img 
-              src="https://www.welcometobratislava.eu/wp-content/uploads/2018/10/photo.jpg" 
-              alt="avatar"
-              className={classes.avatar}
-            >
-            </img>
+         <div className={classes.imageContainer}>
+           <div className={classes.image} style={{backgroundImage: `url(https://www.welcometobratislava.eu/wp-content/uploads/2018/10/photo.jpg)`}}></div>
          </div>
          <div className={classes.aboutDetails}>
             <div className={classes.title}>

@@ -12,7 +12,7 @@ export function EventCard(props) {
             <div className={classes.imgContainer}>
                 {isLoading 
                 ?<Skeleton variant="rect" width={'100%'} height={'100%'} />
-                :<img src={src.imgUrl}></img>}
+                :<div className={classes.image} style={{backgroundImage: `url(${src.imgUrl})`}}></div>}
             </div>
             <div className={classes.content}>
                 {isLoading

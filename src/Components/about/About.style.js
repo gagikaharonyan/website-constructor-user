@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core';
 export const useStyles = makeStyles ({
     aboutContainer: {
         width: 1024,
+        height: 280,
         margin:'auto',
         display: 'flex',
         alignItems: 'center',
@@ -13,11 +14,17 @@ export const useStyles = makeStyles ({
             overflow: 'auto',
         }
     },
-    image: {
+    imageContainer: {
         width: '40%',
+        height: '100%',
         '@media only screen and (max-width:768px)': {
             width: '100%'
         }
+    },
+    image: {
+        width: '100%',
+        height: '100%',
+        backgroundSize: 'cover',
     },
     aboutDetails: {
         width: '50%',

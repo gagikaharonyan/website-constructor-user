@@ -18,7 +18,7 @@ export default class NavBar extends React.Component {
 
     render() {
         const {isMenuOpen} = this.state;
-        console.log(this.props.pathname)
+        
         return (
             <div className="Nav-bar col-container">
                 <ul className={isMenuOpen ? 'nav-menu toggle-clicked' : 'nav-menu'} style={{margin: 0}} onClick={() => {this.displayNavMenu(false)}}>
