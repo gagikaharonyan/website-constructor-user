@@ -10,15 +10,18 @@ export const useStyles = makeStyles ({
         overflow: 'hidden',
         '@media only screen and (max-width:768px)': {
             width: '100%',
+            height: 'auto',
             flexDirection: 'column',
             overflow: 'auto',
+            margin: 0,
         }
     },
     imageContainer: {
         width: '40%',
         height: '100%',
         '@media only screen and (max-width:768px)': {
-            width: '100%'
+            width: '100%',
+            height: '270px',
         }
     },
     image: {
