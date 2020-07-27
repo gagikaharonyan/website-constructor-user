@@ -2,10 +2,10 @@ import React from'react';
 import uuid from 'react-uuid';
 import {componentTypes as type} from '../../constants';
 import {Timer} from '../../Components/event/Timer';
-import { Slide } from '../../Components/event/Slide';
+import { Slide } from '../../Components/commonComponents/Slide-v2';
 import { Location } from '../../Components/event/Location';
 import { Subscribe } from '../../Components/event/SubscribeForm';
-import Heading from '../../Components/post/heading'
+import Heading from '../../Components/commonComponents/heading'
 
 const renderComponent = (component) => {
     switch (component.type) {

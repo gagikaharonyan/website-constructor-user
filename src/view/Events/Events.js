@@ -18,7 +18,7 @@ function Events(props) {
    
     return (
         <div className={`page page-width-container ${classes.root}`}>
-            {_events.map(event => <Link to={`event/${event.title}`}><EventCard src={event} isLoading={isLoading}></EventCard></Link>)}
+            {_events.map((event, _index) => <Link to={`event/${event.title}`}><EventCard index={_index} src={event} isLoading={isLoading}></EventCard></Link>)}
         </div>
     );
 }

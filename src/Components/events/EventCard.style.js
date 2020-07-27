@@ -7,7 +7,7 @@ export const useStyle = makeStyles(theme => ({
         display: 'flex',
         flexDirection: 'row',
         marginBottom: 80,
-        boxShadow: '0px 0px 9px 3px rgba(41,41,41,.25)',
+        // boxShadow: '0px 0px 9px 3px rgba(41,41,41,.25)',
         '@media only screen and (max-width:768px)': {
             width: '95%',
             height: 550,

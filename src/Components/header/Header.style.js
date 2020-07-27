@@ -20,13 +20,17 @@
     },
     appLogo: {
         whiteSpace: 'nowrap',
-        marginLeft: 10,
+        marginLeft: 20,
+        fontSize: 22,
         '& span:first-child': {
             color: "#3fe4fd"
         },
         '& span:nth-child(2)': {
             color: "#a166e4"
-        }
+        },
+        '@media only screen and (max-width:768px)': {
+            marginLeft: 10
+        }   
     },
     navLinks: {
         

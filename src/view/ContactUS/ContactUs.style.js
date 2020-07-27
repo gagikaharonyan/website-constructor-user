@@ -9,7 +9,6 @@ export const useStyle = makeStyles(theme => ({
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#FBFBFB',
         color: '#474747',
     },
     container: {

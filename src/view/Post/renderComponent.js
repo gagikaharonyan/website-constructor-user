@@ -2,10 +2,10 @@ import React from'react';
 import uuid from 'react-uuid';
 import {componentTypes as type} from '../../constants';
 
-import Slide from '../../Components/Slide';
-import Heading from '../../Components/post/heading';
-import Photo from '../../Components/post/photo';
-import Paragraph from '../../Components/post/paragraph';
+import Slide from '../../Components/commonComponents/Slide';
+import Heading from '../../Components/commonComponents/heading';
+import Photo from '../../Components/commonComponents/photo';
+import Paragraph from '../../Components/commonComponents/paragraph';
 import Video from '../../Components/post/video';
 import Quote from '../../Components/post/quote';
 

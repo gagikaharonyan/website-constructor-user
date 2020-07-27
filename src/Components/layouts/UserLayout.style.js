@@ -6,6 +6,8 @@ export const useStyles = makeStyles({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        backgroundColor: '#FBFBFB'
+
     }
 
 })

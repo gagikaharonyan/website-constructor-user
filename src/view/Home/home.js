@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Container from '@material-ui/core/Container';
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import {PostCard} from '../../Components/posts';
-import Slide from '../../Components/Slide';
+import Slide from '../../Components/commonComponents/Slide';
 import {posts as _posts, events as _events, homeSlide as _slide} from '../../customs';
 
 import {useStyles} from './Home.style';
