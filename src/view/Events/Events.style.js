@@ -7,8 +7,13 @@ export const useStyles = makeStyles({
             '& a': {
                 width: '100%',
                 display: 'flex',
-                justifyContent: 'center',
+                flexWrap: 'wrap'
             }
         },        
+    },
+    eventsContainer: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'space-evenly'
     }
 });

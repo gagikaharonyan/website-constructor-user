@@ -13,3 +13,21 @@ export function getPost(title, onSuccess) {
         onSuccess(customPost);
     }, 200)
 }
+
+export function getContactInfos(onSuccess) {
+    axios.get(`https://website-constructor.firebaseio.com/contacts.json`)
+    .then(onSuccess)
+    .catch(function (error) {
+        // handle error
+        console.log(error);
+    })
+}
+
+export function getSiteBaseInfo(onSuccess) {
+    axios.get(`https://website-constructor.firebaseio.com/nav-bar.json`)
+    .then(onSuccess)
+    .catch(function (error) {
+        // handle error
+        console.log(error);
+    })
+}

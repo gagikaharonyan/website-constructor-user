@@ -24,7 +24,7 @@ export default class NavBar extends React.Component {
                 <ul className={isMenuOpen ? 'nav-menu toggle-clicked' : 'nav-menu'} style={{margin: 0}} onClick={() => {this.displayNavMenu(false)}}>
                     {this.props.links.map((link, index) => 
                         <li key={index} onClick={() => {this.displayNavMenu(false)}} className={this.props.pathname === link.url ? 'active-page' : ''}>
-                            <Link to={link.url}>{link.title}</Link>
+                            <Link to={`/${link.name}`}>{link.name}</Link>
                         </li>
                     )}
                 </ul>

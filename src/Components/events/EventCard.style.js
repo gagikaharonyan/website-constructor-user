@@ -2,70 +2,54 @@ import { makeStyles } from '@material-ui/core';
 
 export const useStyle = makeStyles(theme => ({
     root: {
-        width: 1000,
-        height: 320,
-        display: 'flex',
-        flexDirection: 'row',
-        marginBottom: 80,
-        // boxShadow: '0px 0px 9px 3px rgba(41,41,41,.25)',
+        width: 300,
+        height: 500,
+        backgroundColor: '#FFFFFF',
+        fontFamily: 'inherit',
+        margin: '0px 20px 50px 20px',
         '@media only screen and (max-width:768px)': {
-            width: '95%',
-            height: 550,
+            width: 300,
+            height: 500,
             flexDirection: 'column',
          }
     },
-    imgContainer: {
-        flex: 1,
+    media: {
+        height: '35%'
     },
-    image: {
-        width: '100%',
-        height: '100%',
-        backgroundSize: 'cover',
-    },  
     content: {
-        flex: 1,
-        marginLeft: 0,
-        padding: 20,
-        '@media only screen and (max-width:768px)': {
-            margin: 10,
-         }
+        position: 'relative',
+        height: '65%',
+        overflow: 'hidden',
+        fontFamily: 'inherit',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
     },
     title: {
-        minHeight: '15%',
-        display: 'inline-block',
-        fontSize: '25px',
+        height: 30,
         overflow: 'hidden',
-        color: 'black',
-        '@media only screen and (max-width:768px)': {
-            height: 70,
-         }
-    },
-    dateLocationContainer: {
-        height: '10%',
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'flex-start',
-        fontSize: 20,
-        overflow: 'hidden',
-        marginBottom: 20,
-        '@media only screen and (max-width:768px)': {
-            flexDirection: 'column',
-            height: 60,
-        }
-    },
-    date: {
-        marginRight: 20,
+        fontFamily: 'inherit',
     },
     location: {
-       
+        height: 25,
+        overflow: 'hidden',
+        fontFamily: 'inherit',
+        marginTop: 5
+    },
+    date:{
+        fontFamily: 'inherit',
+        marginTop: 1
     },
     description: {
-        height: '53%',
-        display: 'inline-block',
+        maxHeight: 140,
+        fontFamily: 'inherit',
         overflow: 'hidden',
-        textOverflow: 'ellipsis',
-        '@media only screen and (max-width:768px)': {
-            height: 110,
-        }
+        marginTop: 20,
+    },
+    learnMoreBtn: {
+        position: 'absolute',
+        bottom: 10,
+        fontFamily: 'inherit',
+        fontWeight: 700,
     }
 }))

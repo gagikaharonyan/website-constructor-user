@@ -1,7 +1,7 @@
 import {SITE_FETCH_SUCCESS, LOADING_DATA, ERROR} from "../actionTypes/site";
 
 const initialState = {
-    site: {},
+    data: {},
     isLoading: false,
     isLoaded: false,
     error: false
