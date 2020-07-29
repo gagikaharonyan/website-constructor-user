@@ -7,7 +7,6 @@ export const useStyles = makeStyles({
         flexDirection: 'column',
         alignItems: 'center',
         backgroundColor: '#FBFBFB'
-
     }
 
 })

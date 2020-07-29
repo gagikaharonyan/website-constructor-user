@@ -36,6 +36,6 @@
         
     },
     search: {
-       
-    }
+       color: 'inherit'
+    },
  }));

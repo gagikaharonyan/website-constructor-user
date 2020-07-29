@@ -11,14 +11,17 @@ function Events(props) {
     const classes = useStyles();
     const [isLoading, setIsLoading] = useState(true);
 
-
     setTimeout(() => {
         setIsLoading(false);
     }, 1000)
    
     return (
-        <div className={`page page-width-container ${classes.root}`}>
-            {_events.map((event, _index) => <Link to={`event/${event.title}`}><EventCard index={_index} src={event} isLoading={isLoading}></EventCard></Link>)}
+        <div className={`page ${classes.root}`}>
+            <div className={`page-width-container ${classes.eventsContainer}`}>
+            {_events.map((event, _index) => <Link to={`event/${event.title}`}>
+                    <EventCard index={_index} src={event} isLoading={isLoading}></EventCard>
+                </Link>)}
+            </div>
         </div>
     );
 }
