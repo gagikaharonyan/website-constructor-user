@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
-
-import Container from '@material-ui/core/Container';
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
+
 import {PostCard} from '../../Components/posts';
 import Slide from '../../Components/commonComponents/Slide';
 import {posts as _posts, events as _events, homeSlide as _slide} from '../../customs';
@@ -23,15 +22,17 @@ const Home = (props) => {
 
     return (
         <>
-            <div className={classes.slideContainer}>
-                <Slide imgUrls={_slide} />
-            </div>
-        <Container maxWidth='lg'>
+        <div className={classes.slideContainer}>
+            <Slide imgUrls={_slide} />
+        </div>
+        <div className={`page page-width-container ${classes.homeContainer}`}>
             <div className={classes.postsContainer}>
                 <h2 className={classes.latestPosts}>Latest Posts</h2>
                 <div className={classes.posts}>
                 {posts.map(post => (
-                    <PostCard src={post} loading={isLoading}/>
+                    <Link to={`post/${post.title}`} target='_blank' >
+                        <PostCard src={post} loading={isLoading}/>
+                    </Link>
                 ))}
                 </div>
                 <div className={classes.seeMore}>
@@ -45,10 +46,22 @@ const Home = (props) => {
                 <h2 className={classes.newEvents}>New events</h2>
                 <div className={classes.events}>
                     {newEvents.map(event => (
-                        <div className={classes.eventContent}>
-                            <img src={event.imgUrl} alt='event' className={classes.eventImage}></img>
-                            <div className={classes.eventTitle}>{event.title}</div>
-                        </div>
+                        <Link to={`events/${event.title}`} className={classes.eventContent}>
+                            
+                            <div 
+                                className={classes.eventImage} 
+                                style={{backgroundImage: `url(${event.imgUrl})`}}
+                            >
+                            </div>
+                            <div className={classes.eventTitle}>
+                                {event.title.length > 50 ? (
+                                    event.title.substring(0,50) + '...'
+                                ) : (
+                                    event.title
+                                )}
+                            </div>
+                        </Link>
+                       
                     ))
 
                     }
@@ -60,7 +73,7 @@ const Home = (props) => {
                     </Link>
                 </div>
             </div>
-        </Container>
+        </div>
         </>
         
     )
