@@ -1,10 +1,14 @@
-import {SITE_FETCH_SUCCESS, LOADING_DATA, ERROR} from "../actionTypes/site";
+import {SITE_FETCH_SUCCESS, 
+    LOADING_DATA, 
+    ERROR,
+    SET_SEARCHED_TEXT} from "../actionTypes/site";
 
 const initialState = {
     data: {},
     isLoading: false,
     isLoaded: false,
-    error: false
+    error: false,
+    searchedText: '',
 }
 
 const SiteReducer = (state = initialState, action) => {
@@ -19,7 +23,11 @@ const SiteReducer = (state = initialState, action) => {
             };
         case ERROR:
             return {
-                ...state,error: action.payload
+                ...state, error: action.payload
+            };
+        case SET_SEARCHED_TEXT:
+            return {
+                ...state, searchedText: action.text
             };
         default:
             return state

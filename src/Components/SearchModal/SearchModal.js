@@ -1,30 +1,42 @@
 import React, { useState } from 'react';
 import { functions } from 'firebase';
 import useStyle from './SearchModal.style';
-import {posts, post} from '../../customs';
+import {posts as _posts} from '../../customs';
 import PostCard from './PostCard';
 import {Link} from 'react-router-dom';
+import {connect} from 'react-redux';
+import {setSearchedText} from '../../store/actions/site';
 
 
-export default function SearchModal(props) {
+function SearchModal(props) {
     const classes = useStyle();
-    const [searchResults, setSearchResults] = useState(searchItems(props.searchedText));
+    const {searchedText} = props.site; 
 
-    
-    function searchItems(text) {
-        return posts.filter((post) => {
-            return post.title.toLowerCase().includes(text.toLowerCase())
-        } );
+    if(searchedText.length !== 0) {
+        const posts = _posts.filter((post) => {
+            return post.title.toLowerCase().includes(searchedText.toLowerCase());
+        });
+
+        return (
+            <div className={classes.root}>
+                {posts.map((post) => 
+                    <Link to={`/post/${post.title}`} onClick={() => props.closeModal()}>
+                        <PostCard src={post}/>
+                    </Link>)}
+            </div>
+        );
+    } else {
+        return '';
     }
-
     
-
-    return (
-        <div className={classes.root}>
-            {posts.map((post) => 
-                <Link to={`post/${post.title}`}>
-                    <PostCard src={post}/>
-                </Link>)}
-        </div>
-    );
 }
+
+const mapStateToProps = (state) => ({
+    site: state.site
+});
+
+const mapDispatchToProps = (dispatch) => ({
+    closeModal: (text) => dispatch(setSearchedText(''))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchModal);
