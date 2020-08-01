@@ -7,14 +7,17 @@ import {withRouter} from "react-router";
 import InputAdornment from '@material-ui/core/InputAdornment';
 import TextField from '@material-ui/core/TextField';
 import SearchIcon from '@material-ui/icons/Search';
+import {setSearchedText} from '../../store/actions/site';
 
 function Header(props) {
     const {site} = props;
     const classes = useStyle();
     const navLinks = site.data.pages;
-    const {backgroundColor, color} = site.isLoaded? site.data : {backgroundColor: 'white', color: 'black'};
+    const {backgroundColor, color} = {backgroundColor: 'white', color: 'black'};
     
-    const handleOnSearch = (event) => {props.onSearch(event.target.value)};
+    const handleOnSearch = (event) => {
+        props.setSearchedText(event.target.value);
+    };
 
     return(
         <div className={classes.root} style={{backgroundColor, color}}>
@@ -23,10 +26,14 @@ function Header(props) {
                 <span>Constructor</span>
             </Link>        
             { site.isLoaded
-            ?<NavBar className={classes.navLinks} links={navLinks} pathname={props.location.pathname}></NavBar>
+            ?<NavBar className={classes.navLinks}
+             links={navLinks} 
+             pathname={props.location.pathname}
+             onDisplayNavMenu={(isOpen) => props.setSearchedText('')}></NavBar>
             : '' }
             <TextField
                 onChange={handleOnSearch}
+                value={site.searchedText}
                 style={{margin: '0 50px 0 20px'}}
                 InputProps={{
                 startAdornment: (
@@ -44,4 +51,8 @@ const mapStateToProps = (state) => ({
     site: state.site
 });
 
-export default connect(mapStateToProps)(withRouter(Header));
+const mapDispatchToProps = (dispatch) => ({
+    setSearchedText: (text) => dispatch(setSearchedText(text))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Header));

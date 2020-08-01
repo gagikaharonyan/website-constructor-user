@@ -17,7 +17,7 @@ const useStyle = makeStyles(theme => ({
        alignItems: 'center',
        overflowY: 'auto',
        padding: 10,
-       '@media only screen and (max-width:768px)': {
+       '@media only screen and (max-width: 576px)': {
         right: 0,
         width: '100%',
     } 

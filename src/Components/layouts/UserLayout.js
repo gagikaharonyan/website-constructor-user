@@ -1,5 +1,4 @@
 import React, {useState, useEffect } from 'react';
-import {Container, Row} from 'react-bootstrap';
 import Header from '../Header';
 import Footer from '../Footer'
 import {connect} from 'react-redux';
@@ -9,15 +8,10 @@ import {SearchModal} from '../SearchModal';
 import { useStyles } from './UserLayout.style';
 
 const UserLayout = (props) => {
-    const [searchedText, setSearchedText] = useState('');
     const classes = useStyles();
 
     const loadSite = () => {
         props.site.isLoaded || props.fetchSite();
-    }
-
-    const handleSearch = (text) => {
-        setSearchedText(text)
     }
 
     useEffect(() => {
@@ -25,8 +19,8 @@ const UserLayout = (props) => {
     }, [])
 
     return (<div className={classes.App}>
-                <Header onSearch={handleSearch}/>
-                {searchedText.length !== 0 ? <SearchModal searchedText={searchedText}/> : ''}
+                <Header/>
+                <SearchModal/>
                 {props.children}
                 <Footer/>
             </div>)

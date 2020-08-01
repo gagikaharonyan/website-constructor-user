@@ -7,7 +7,24 @@ function Footer(props) {
     const classes = useStyle();
     console.log(site)
     const renderSocialLinks = (links) => {
-       console.log(links)
+        let component;
+
+        for(let i in links) {
+            switch (i) {
+                case 'facebook':
+                    
+                    break;
+                case 'instagram':
+                
+                    break;
+                case 'facebook':
+            
+                    break;
+            
+                default:
+                    break;
+            }
+        }
     }
 
     return(

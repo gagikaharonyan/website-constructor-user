@@ -12,6 +12,7 @@ export default class NavBar extends React.Component {
     }
 
     displayNavMenu(open) {
+        this.props.onDisplayNavMenu(open);
         document.body.classList = open ? 'fixed-position' : '';
         this.setState({isMenuOpen: open});
     }
