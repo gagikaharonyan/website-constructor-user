@@ -1,8 +1,12 @@
 import { makeStyles } from '@material-ui/core';
 
 export const useStyles = makeStyles({
-    eventsContainer: {
+    heading: {
         marginTop:120,
     },
+    eventsContainer: {
+        
+    },
+    
    
 })

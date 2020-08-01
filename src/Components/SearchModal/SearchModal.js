@@ -22,7 +22,7 @@ export default function SearchModal(props) {
     return (
         <div className={classes.root}>
             {posts.map((post) => 
-                <Link to={`post/${post.title}`}>
+                <Link to={`/post/${post.title}`}>
                     <PostCard src={post}/>
                 </Link>)}
         </div>

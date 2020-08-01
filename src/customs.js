@@ -123,6 +123,7 @@ export const homeSlide  = [
     'https://ardenetvous.com/wp-content/uploads/2020/01/fagnes_celine_lecomte-e1579856401849-1800x500.jpg',
 ]
 
+
 export const event = [
     {
         type: 'HEADING',
@@ -139,14 +140,14 @@ export const event = [
     },
     {
         type: 'SLIDE',
-        sliderType: '', //expect 'cube' or 'fade'
+        sliderType: '', 
         src: ['https://as00.epimg.net/img/les/20200229/dea084f2530b36689bdb17e63b4f198f/69d914a4ff7cb78c31abd19e73eba0ca_720.png',
-                'https://as01.epimg.net/en/imagenes/2020/02/28/football/1582900958_522512_1582901120_noticia_normal_recorte1.jpg',
-                'https://en.as.com/en/imagenes/2020/02/29/football/1582969808_951576_1582969867_noticia_normal_recorte1.jpg'
+                // 'https://as01.epimg.net/en/imagenes/2020/02/28/football/1582900958_522512_1582901120_noticia_normal_recorte1.jpg',
+                // 'https://en.as.com/en/imagenes/2020/02/29/football/1582969808_951576_1582969867_noticia_normal_recorte1.jpg'
             ]
     },
     {
-        type: 'DESCRIPTION',
+        type: 'PARAGRAPH',
         text: 'Come to watch real football!! The full package costs 2995 euro. It includes Round trip flights (economy class) to Spain from major airports in the U.S. and Canada, 5 days/4 nights in a 4 star hotel, Guided tour of important city monuments, Daily breakfasts, Taxes included'
     },
     {
@@ -279,3 +280,22 @@ export const events = [
     },
 
 ]
+
+
+export const event2 = {
+    
+        cover: {
+            name: '',
+            url: 'https://wallpaperhd.wiki/wp-content/uploads/football-wallpaper-football-wallpaper-for-ipad-1920x1080-4.jpg'
+        },
+        date: '24th July 2020',
+        heading: 'El classico - Real Madrid vs FC Barcelona',
+        location: {
+            address: 'Barcelona, Camp Nou',
+            mapLink: 'https://goo.gl/maps/NGMKw2wpMjYJHMM4A'
+        },
+        slide: ['', ''],
+        paragraph: 'Come to watch real football!! The full package costs 2995 euro. It includes Round trip flights (economy class) to Spain from major airports in the U.S. and Canada, 5 days/4 nights in a 4 star hotel, Guided tour of important city monuments, Daily breakfasts, Taxes included',
+        subscribe: ''
+    }
+   
