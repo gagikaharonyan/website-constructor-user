@@ -6,9 +6,18 @@ function Paragraph (props) {
     const classes = useStyles();
 
     return (
-        <div className={classes.paragraph}>
-            {props.text}
-        </div>
+        <>
+        {props.variant === 'event' ? (
+            <div className={classes.paragraph} dangerouslySetInnerHTML={{ __html: props.text }}>
+                
+            </div>
+        ): (
+            <div className={classes.paragraph}>
+                {props.text}
+            </div>
+        )}
+        
+        </>
     )
 }
 

@@ -1,14 +1,14 @@
 import app from "firebase"
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDMSFtY9rNmAF-otj0oOBKxDNoY_rOdIbM",
-    authDomain: "website-constructor-user.firebaseapp.com",
-    databaseURL: "https://website-constructor-user.firebaseio.com",
-    projectId: "website-constructor-user",
-    storageBucket: "website-constructor-user.appspot.com",
-    messagingSenderId: "858680372616",
-    appId: "1:858680372616:web:817adf1857dc0414db5e3d",
-    measurementId: "G-QWXLDDFHD7"
+    apiKey: "AIzaSyAGjaYNXQUB2mQ391Wz6ohMJCJaAKYCXbM",
+    authDomain: "website-constructor.firebaseapp.com",
+    databaseURL: "https://website-constructor.firebaseio.com",
+    projectId: "website-constructor",
+    storageBucket: "website-constructor.appspot.com",
+    messagingSenderId: "521285781916",
+    appId: "1:521285781916:web:11d9c1e4cd598221ac6059",
+    measurementId: "G-ZM8BPNSK72"
 };
 
 
@@ -19,6 +19,7 @@ class FireBase {
         this.db = app.database();
         this.storage = app.storage();
     }
+    event = uid => this.db.ref(`events/${uid}`)
 }
 
 export default FireBase

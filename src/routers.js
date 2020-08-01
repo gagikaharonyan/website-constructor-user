@@ -16,7 +16,7 @@ export const Routers = () => {
                 <AppRouter path={'/aboutUs'} layout={UserLayout} component={AboutUs}/>
                 <AppRouter path={'/posts'} layout={UserLayout} component={Posts}/>
                 <AppRouter path={'/events'} layout={UserLayout} component={Events}/>
-                <AppRouter path={'/event/:title'} layout={UserLayout} component={Event}/>
+                <AppRouter path={'/event/:id'} layout={UserLayout} component={Event}/>
             </Switch>
         </>
     )
