@@ -10,7 +10,7 @@ import EventIcon from '@material-ui/icons/Event';
 import {useStyle} from './EventCard.style';
 
 export function EventCard(props) {
-    const { loading = false, src, index } = props;
+    const { loading = false, src } = props;
     const classes = useStyle();
 
     return (
@@ -20,8 +20,8 @@ export function EventCard(props) {
           ) : (
             <CardMedia
               className={classes.media}
-              image={src.imgUrl}
-              title={src.title}
+              image={src.cover.url}
+              title={src.heading}
             ></CardMedia>
           )}
           <CardContent className={classes.content}>
@@ -35,13 +35,25 @@ export function EventCard(props) {
                 <Skeleton animation="wave" height={10} style={{ marginBottom: 15, width: "70%" }} />
               </>
             ) : (<>
-                <Typography className={classes.title} variant="h6" color="textPrimary" component="p">{src.title}</Typography>
+                <Typography className={classes.title} variant="h6" color="textPrimary" component="p">{src.heading}</Typography>
                 <Typography className={classes.location} variant="body2" color="textSecondary"
-                    component="p"><LocationOnIcon/> {src.location}</Typography>
-                <Typography className={classes.date} variant="body2" color="textSecondary"
-                    component="p"><EventIcon/> {src.date}</Typography>
-                <Typography className={classes.description} variant="body2" color="textSecondary"
-                    component="p">{src.description}</Typography>
+                    component="p"><LocationOnIcon/> {src.location.address}</Typography>
+                <Typography 
+                  className={classes.date} 
+                  variant="body2" 
+                  color="textSecondary"
+                  component="p"
+                >
+                    <EventIcon/> {src.date}
+                </Typography>
+                <Typography 
+                  className={classes.description} 
+                  variant="body2" 
+                  color="textSecondary"
+                  component="p"
+                  dangerouslySetInnerHTML={{ __html: src.details }}
+                >
+                </Typography>
                 <Button className={classes.learnMoreBtn} variant="outlined">Learn more</Button>              
             </>)}
           </CardContent>

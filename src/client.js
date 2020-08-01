@@ -31,3 +31,12 @@ export function getSiteBaseInfo(onSuccess) {
         console.log(error);
     })
 }
+
+export function getEventsInfo(onSuccess) {
+    axios.get(`https://website-constructor.firebaseio.com/events.json`)
+    .then(onSuccess)
+    .catch(function (error) {
+        // handle error
+        console.log(error);
+    })
+}
