@@ -289,12 +289,13 @@ export const event2 = {
             url: 'https://wallpaperhd.wiki/wp-content/uploads/football-wallpaper-football-wallpaper-for-ipad-1920x1080-4.jpg'
         },
         date: '24th July 2020',
+        dateByString: '2020-08-17T22:27',
         heading: 'El classico - Real Madrid vs FC Barcelona',
         location: {
             address: 'Barcelona, Camp Nou',
             mapLink: 'https://goo.gl/maps/NGMKw2wpMjYJHMM4A'
         },
-        slide: ['', ''],
+        slide: ['https://as00.epimg.net/img/les/20200229/dea084f2530b36689bdb17e63b4f198f/69d914a4ff7cb78c31abd19e73eba0ca_720.png', 'https://wallpaperhd.wiki/wp-content/uploads/football-wallpaper-football-wallpaper-for-ipad-1920x1080-4.jpg'],
         paragraph: 'Come to watch real football!! The full package costs 2995 euro. It includes Round trip flights (economy class) to Spain from major airports in the U.S. and Canada, 5 days/4 nights in a 4 star hotel, Guided tour of important city monuments, Daily breakfasts, Taxes included',
         subscribe: ''
     }

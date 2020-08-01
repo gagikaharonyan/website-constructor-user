@@ -1,12 +1,15 @@
 import React from 'react';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 
+import {useStyles} from './Location.style';
+
 function Location (props){
+    const classes = useStyles();
     return (
-        <div>
-            <a href={props.location} target="_blank" rel="noopener noreferrer" >
+        <div className={classes.location}>
+            <a href={props.location.mapLink} target="_blank" rel="noopener noreferrer" >
                 <LocationOnIcon />
-                <span>{props.address}</span>
+                <span>{props.location.address}</span>
             </a>
         </div>
     )

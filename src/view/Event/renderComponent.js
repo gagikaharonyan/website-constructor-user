@@ -1,20 +1,29 @@
 import React from'react';
-import uuid from 'react-uuid';
-import {componentTypes as type} from '../../constants';
 import {Cover} from '../../Components/event/Cover';
-import {Timer} from '../../Components/event/Timer';
 import { Slide } from '../../Components/commonComponents/Slide-v2';
-import { Location } from '../../Components/event/Location';
 import { Subscribe } from '../../Components/event/SubscribeForm';
-import Heading from '../../Components/commonComponents/heading';
 import Paragraph from '../../Components/commonComponents/paragraph';
 
+
 const renderComponent = (component) => {
-    return (
-        <>
-            <Cover src={component.cover.url} />
-        </>
-    )
+  return (
+    <>
+      <Cover 
+        src={component.cover.url} 
+        date={component.date} 
+        text={component.heading}
+        timer={component.dateBySeconds}
+        location={component.location}
+      />
+        <Paragraph text={component.paragraph} />
+
+        {component.slide && (<Slide src={component.slide} />)}
+
+      <Subscribe invitationText={component.subscribe}/>
+
+        
+    </>
+  )
 
 
 

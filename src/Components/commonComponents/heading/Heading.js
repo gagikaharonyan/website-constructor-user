@@ -6,9 +6,17 @@ function Heading (props) {
     const classes = useStyles();
 
     return (
-        <div className={classes.heading}>
-            {props.text}
-        </div>
+        <>
+            {props.variant === 'event' ? (
+                <div className={classes.eventHeading}>
+                {props.text}
+            </div>
+            ) : (
+                <div className={classes.heading}>
+                    {props.text}
+                </div>
+            )}
+        </>
     )
 }
 

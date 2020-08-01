@@ -7,6 +7,12 @@ export const useStyles = makeStyles({
     eventsContainer: {
         
     },
-    
-   
-})
+    eventContent: {
+        display: 'flex',
+        width:900,
+        margin: '40px auto',
+        '@media only screen and (max-width:900)':{
+            flexDirection: 'column'
+        }
+    }
+});

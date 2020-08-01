@@ -8,5 +8,12 @@ export const useStyles = makeStyles({
         '@media only screen and (max-width:600px)': {
             fontSize: 24
           }
+    },
+    eventHeading: {
+        fontSize: '4em',
+        lineHeight: 1,
+        width: 650,
+        textAlign: 'center'
+
     }
 })
