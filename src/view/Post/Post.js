@@ -19,7 +19,7 @@ function Post () {
         //     console.log(res);
         // })
     }, []);
-    console.log(theme)
+
     return (
         <div className={'page'}>
             { post ? post.map(renderComponent) : <span>Loading</span> }

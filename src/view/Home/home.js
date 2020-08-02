@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import uuid from 'react-uuid';
 import { Link } from 'react-router-dom';
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import {connect} from 'react-redux';
@@ -6,11 +7,12 @@ import {PostCard} from '../../Components/posts';
 import Slide from '../../Components/commonComponents/Slide';
 import {posts as _posts, events as _events, homeSlide as _slide} from '../../customs';
 
+import { cutText } from '../../extentions/excerpt';
+
 import {useStyles} from './Home.style';
 
 const Home = (props) => {
     const newPosts = _posts.slice(0, 6);
-    const newEvents = _events.slice(0,4);
     const [isLoading, setIsLoading] = useState(true);
     const [posts, setPosts] = useState(newPosts);
     const classes = useStyles();
@@ -31,7 +33,7 @@ const Home = (props) => {
                 <h2 className={classes.latestPosts}>Latest Posts</h2>
                 <div className={classes.posts}>
                 {posts.map(post => (
-                    <Link to={`post/${post.title}`} target='_blank' >
+                    <Link to={`post/${post.title}`} target='_blank' key={uuid()} >
                         <PostCard src={post} loading={isLoading}/>
                     </Link>
                 ))}
@@ -46,19 +48,15 @@ const Home = (props) => {
             <div className={classes.eventsContainer}>
                 <h2 className={classes.newEvents}>New events</h2>
                 <div className={classes.events}>
-                    {Object.keys(events.data).map(key => (
-                        <Link to={`/event/${key}`} className={classes.eventContent}>
+                    {Object.values(events).map(event => (
+                        <Link to={`/event/${event.id}`} className={classes.eventContent} key={uuid()}>
                             <div 
                                 className={classes.eventImage} 
-                                style={{backgroundImage: `url(${events.data[key].imageUrl})`}}
+                                style={{backgroundImage: `url(${event.cover.url})`}}
                             >
                             </div>
-                            <div className={classes.Title}>
-                                {events.data[key].heading.length > 50 ? (
-                                    events.data[key].heading.substring(0,50) + '...'
-                                ) : (
-                                    events.data[key].heading
-                                )}
+                            <div className={classes.eventTitle}>
+                                {cutText(event.heading, 50)}
                             </div>
                         </Link>
                        
@@ -76,7 +74,7 @@ const Home = (props) => {
 }
 
 const mapStateToProps = (state) => ({
-    events: state.events
+    events: state.events.data,
 });
   
 export default connect(mapStateToProps)(Home);

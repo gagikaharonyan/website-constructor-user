@@ -6,6 +6,8 @@ import Typography from '@material-ui/core/Typography';
 import Skeleton from '@material-ui/lab/Skeleton';
 import {useStyle} from './PostCard.style';
 
+import { cutText } from '../../extentions/excerpt'
+
 export function PostCard(props) {
     const { loading = false, src } = props;
     const classes = useStyle();
@@ -32,12 +34,16 @@ export function PostCard(props) {
                 <Skeleton animation="wave" height={10} style={{ marginBottom: 15, width: "70%" }} />
               </>
             ) : (<>
-            <div className={classes.contentHeader}>
-              <Typography variant="body3" color="textSecondary" component="p">{src.category}</Typography>
-              <Typography variant="body3" color="textSecondary" component="p">{src.dateCreated}</Typography>
-            </div>
-              <Typography className={classes.title} variant="h6" color="textPrimary" component="p">{src.title}</Typography>
-              <Typography className={classes.description} variant="body2" color="textSecondary" component="p">{src.description}</Typography>
+              <div className={classes.contentHeader}>
+                <Typography variant="body2" color="textSecondary" component="p">{src.category}</Typography>
+                <Typography variant="body2" color="textSecondary" component="p">{src.dateCreated}</Typography>
+              </div>
+              <Typography className={classes.title} variant="h6" color="textPrimary" component="p">
+                {cutText(src.title, 30)}
+              </Typography>
+              <Typography className={classes.description} variant="body2" color="textSecondary" component="p">
+                {cutText(src.description, 150)}
+              </Typography>
             </>)}
           </CardContent>
         </Card>

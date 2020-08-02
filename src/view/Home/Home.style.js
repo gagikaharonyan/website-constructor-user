@@ -60,7 +60,8 @@ export const useStyles = makeStyles({
         marginTop: 60
     },
     eventsContainer: {
-        margin: '0 20px 20px 20px'
+        margin: '0 20px 20px 20px',
+        width: '100%',
     },
     newEvents:{
         width: 'fit-content',
@@ -72,7 +73,7 @@ export const useStyles = makeStyles({
         background: '#0000007d',
         width: '100%',   
         color: 'white',
-        padding: '10px 0'
+        padding: '10px 0 10px 10px',
 
     },
     eventImage: {
@@ -85,13 +86,14 @@ export const useStyles = makeStyles({
     },
     events: {
         display: 'flex',
-        justifyContent: 'space-between',
+        justifyContent: 'flex-start',
         flexWrap: 'wrap'
     },
     eventContent: {
         width: '24%',
         height: 220,
         marginBottom:20,
+        marginRight: 10,
         '@media only screen and (max-width:900px)':{
             width: '48%',
         },
