@@ -24,6 +24,7 @@ const UserLayout = (props) => {
          loadSite();
     }, [props.site, props.events])
 
+    window.scrollTo(0, 0)
     return (<div className={classes.App}>
                 <Header/>
                 <SearchModal/>
