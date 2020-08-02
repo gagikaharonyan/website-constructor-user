@@ -10,10 +10,13 @@ import { cutText } from '../../extentions/excerpt'
 
 export function PostCard(props) {
     const { loading = false, src } = props;
+
     const classes = useStyle();
 
     return (
         <Card className={classes.root}>
+            {console.log(src, 600)}
+
           {loading ? (
             <Skeleton animation="wave" variant="rect" className={classes.media} />
           ) : (

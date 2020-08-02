@@ -29,7 +29,10 @@ export const useStyles = makeStyles({
     events: {
         display: 'flex',
         justifyContent: 'flex-start',
-        flexWrap: 'wrap'
+        flexWrap: 'wrap',
+        '@media only screen and (max-width:900px)':{
+            justifyContent: 'space-around',
+        },
     },
     eventContent: {
         width: '24%',
@@ -37,7 +40,7 @@ export const useStyles = makeStyles({
         marginBottom:20,
         marginRight: 10,
         '@media only screen and (max-width:900px)':{
-            width: '48%',
+            width: '46%',
         },
     }
 })

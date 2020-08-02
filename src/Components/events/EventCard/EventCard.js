@@ -46,14 +46,14 @@ export function EventCard(props) {
                 >
                     <EventIcon/> {src.date}
                 </Typography>
-                <Typography 
+                {/* <Typography 
                   className={classes.description} 
                   variant="body2" 
                   color="textSecondary"
                   component="p"
                   dangerouslySetInnerHTML={{ __html: src.details }}
                 >
-                </Typography>
+                </Typography> */}
                 <Button className={classes.learnMoreBtn} variant="outlined">Learn more</Button>              
             </>)}
           </CardContent>

@@ -11,9 +11,14 @@ export const useStyles = makeStyles({
             }
         },        
     },
+    eventsPageTitle: {
+        fontSize: 32,
+        margin: '10px 0 40px 0',
+        borderBottom: '1px solid grey'
+    },
     eventsContainer: {
         display: 'flex',
         flexWrap: 'wrap',
-        justifyContent: 'space-evenly'
+        justifyContent: 'center'
     }
 });

@@ -28,14 +28,14 @@ const Home = (props) => {
     return (
         <>
         <div className={classes.slideContainer}>
-            <Slide imgUrls={_slide} />
+            <Slide imgUrls={_slide} loading={isLoading}/>
         </div>
-        {console.log(props.eventsLoaded)}
+        {console.log(props.posts,props.postsLoaded, 50000)}
         <div className={`page page-width-container ${classes.homeContainer}`}>
             <div className={classes.postsContainer}>
                 <h2 className={classes.latestPosts}>Latest Posts</h2>
                 <div className={classes.posts}>
-                {posts.map(post => (
+                {Object.values(props.posts).map(post => (
                     <Link to={`post/${post.title}`} target='_blank' key={uuid()} >
                         <PostCard src={post} loading={isLoading}/>
                     </Link>
@@ -72,8 +72,8 @@ const Home = (props) => {
 const mapStateToProps = (state) => ({
     events: state.events.data,
     eventsLoaded: state.events.isLoaded,
-    posts: state.posts,
-    postsLoaded: state.posts.isLoaded
+    posts: state.posts.data,
+    postsLoaded: state.posts.isLoading
 });
   
 export default connect(mapStateToProps)(Home);

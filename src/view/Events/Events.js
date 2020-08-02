@@ -12,6 +12,7 @@ function Events(props) {
 
   return (
     <div className={`page ${classes.root}`}>
+      <div className={classes.eventsPageTitle}>Dont miss our Events</div>
       <div className={`page-width-container ${classes.eventsContainer}`}>
         {Object.keys(events.data).map(event =>
           <Link 

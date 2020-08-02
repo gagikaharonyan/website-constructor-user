@@ -10,8 +10,10 @@ export const useStyles = makeStyles({
         flexWrap: 'wrap',
         padding: '0 40px',
         width: '100%',
+        // margin: '0 10px',
+        
         '& .MuiPaper-root': {
-            width: '100%',
+            // width: '100%',
         },
         '@media only screen and (max-width:768px)':{
             justifyContent: 'center'
@@ -88,7 +90,11 @@ export const useStyles = makeStyles({
     events: {
         display: 'flex',
         justifyContent: 'flex-start',
-        flexWrap: 'wrap'
+        flexWrap: 'wrap',
+        '@media only screen and (max-width:900px)':{
+            justifyContent: 'space-around',
+
+        },
     },
     eventContent: {
         width: '24%',
@@ -96,7 +102,7 @@ export const useStyles = makeStyles({
         marginBottom:20,
         marginRight: 10,
         '@media only screen and (max-width:900px)':{
-            width: '48%',
+            width: '46%',
         },
     }
 
