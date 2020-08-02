@@ -72,9 +72,7 @@ const Home = (props) => {
                 </div>
             </div>
         </div>
-        </>
-        
-    )
+        </>)
 }
 
 const mapStateToProps = (state) => ({

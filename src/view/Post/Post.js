@@ -13,11 +13,11 @@ function Post () {
     const theme = useTheme();
     
     useEffect(() => {
-        getPost(params.title,
-        (res) => {
-            setPost(res);
-            console.log(res);
-        })
+        // getPost(params.title,
+        // (res) => {
+        //     setPost(res);
+        //     console.log(res);
+        // })
     }, []);
     console.log(theme)
     return (

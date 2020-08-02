@@ -10,10 +10,10 @@ export const Routers = () => {
         <>
             <Switch>
                 <AppRouter exact path={'/'} layout={UserLayout} component={Home}/>
-                <AppRouter path={'/home'} layout={UserLayout} component={Home}/>
+                {/* <AppRouter path={'/home'} layout={UserLayout} component={Home}/> */}
                 <AppRouter path={'/post/:title'} layout={UserLayout} component={Post}/>
-                <AppRouter path={'/contactus'} layout={UserLayout} component={ContactUs}/>
-                <AppRouter path={'/aboutUs'} layout={UserLayout} component={AboutUs}/>
+                <AppRouter path={'/contact-us'} layout={UserLayout} component={ContactUs}/>
+                <AppRouter path={'/about'} layout={UserLayout} component={AboutUs}/>
                 <AppRouter path={'/posts'} layout={UserLayout} component={Posts}/>
                 <AppRouter path={'/events'} layout={UserLayout} component={Events}/>
                 <AppRouter path={'/event/:id'} layout={UserLayout} component={Event}/>
