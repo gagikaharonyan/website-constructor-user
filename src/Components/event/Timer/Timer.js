@@ -8,7 +8,7 @@ export function Timer(props) {
     return(
         <div className={classes.root}>
             <Time
-                initialTime={5500000}
+                initialTime={Date.parse(props.timer) - Date.now()}
                 direction="backward"
             >
                 {() => (
