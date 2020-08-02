@@ -1,24 +1,17 @@
 import React, {useState, useEffect} from "react";
-import uuid from 'react-uuid';
-
+import Loading from '../../Components/Loading';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
-import {posts as _posts, categories} from '../../customs';
 import {PostCard} from '../../Components/posts';
 import {useStyle} from './Posts.style';
 import Chips from '../../Components/Chips/Chips'
-
 import {getCategories} from '../../client'
 
 function Posts(props) {
     const classes = useStyle();
-    const {posts} = props;
-    const [isLoading, setIsLoading] = useState(true);
-    const [categories, setCategories] =useState({isLoading: true, data: []})
-    const [sortedPosts, setSortedPosts] = useState(posts); //////////////
-    setTimeout(() => {
-        setIsLoading(false)
-    }, 1000)
+    const {posts, isLoaded} = props;
+    const [categories, setCategories] = useState({isLoading: true, data: {}})
+    const [sortedPosts, setSortedPosts] = useState({1: {}, 2: {}, 3: {}});
 
     useEffect(() => {
         getCategories(res => {
@@ -26,35 +19,35 @@ function Posts(props) {
         })
     }, []);
 
-    const handleOnSetActiveChips = (activeChips) => {
-        setSortedPosts((activeChips.length === 0) ? posts : posts.filter(post => activeChips.includes(post.category)));
-    }
+    useEffect(() => {
+        isLoaded && setSortedPosts(posts);
+    }, [isLoaded]);
 
-    console.log(posts)
+    const handleOnSetActiveChips = (activeChips) => {        
+        setSortedPosts((activeChips.length === 0) ? posts : Object.values(posts).filter(post => activeChips.includes(post.category)));
+    }
+    
     return (
         <div className={'page'}>
             <div className={'page-width-container ' + classes.postsContainer}>
                 <div className={classes.chips}>
-                    {Object.values(categories.data).map(category => (
-                        <Chips 
-                            key={uuid()} 
-                            src={category.category} 
-                            onSetActiveChips={handleOnSetActiveChips}
-                        ></Chips>
-                    ))}
+                    {categories.isLoading
+                    ?<Loading/>
+                    :<Chips src={Object.values(categories.data)} onSetActiveChips={handleOnSetActiveChips}></Chips>}
                 </div>
-                {/* {sortedPosts.map(post => 
+                {Object.values(sortedPosts).map(post => 
                     <Link to={`post/${post.title}`}>
-                        <PostCard src={post} loading={isLoading}></PostCard>
+                        <PostCard src={post} loaded={isLoaded}></PostCard>
                     </Link>
-                )} */}
+                )}
             </div>
         </div>
     );
 }
 
 const mapStateToProps = (state) => ({
-    posts: state.posts
+    posts: state.posts.data,
+    isLoaded: state.posts.isLoaded
 });
   
 export default connect(mapStateToProps)(Posts);

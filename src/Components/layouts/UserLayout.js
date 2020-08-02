@@ -22,8 +22,12 @@ const UserLayout = (props) => {
 
     useEffect(() => {
          loadSite();
-    }, [props.site, props.events])
+    }, [props.site, props.events]);
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+   }, [props.children])
+   
     return (<div className={classes.App}>
                 <Header/>
                 <SearchModal/>

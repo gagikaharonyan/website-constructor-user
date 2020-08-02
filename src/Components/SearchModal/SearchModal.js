@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { functions } from 'firebase';
 import useStyle from './SearchModal.style';
-import {posts as _posts} from '../../customs';
 import PostCard from './PostCard';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
@@ -13,14 +11,14 @@ function SearchModal(props) {
     const {searchedText} = props.site; 
 
     if(searchedText.length !== 0) {
-        const posts = _posts.filter((post) => {
+        const posts = props.posts.filter((post) => {
             return post.title.toLowerCase().includes(searchedText.toLowerCase());
         });
 
         return (
             <div className={classes.root}>
                 {posts.map((post) => 
-                    <Link to={`/post/${post.title}`} onClick={() => props.closeModal()}>
+                    <Link to={`/post/${post.title}`} onClick={() => props.closeModal()} style={{width: '100%'}}>
                         <PostCard src={post}/>
                     </Link>)}
             </div>
@@ -32,7 +30,8 @@ function SearchModal(props) {
 }
 
 const mapStateToProps = (state) => ({
-    site: state.site
+    site: state.site,
+    posts: Object.values(state.posts.data)
 });
 
 const mapDispatchToProps = (dispatch) => ({
