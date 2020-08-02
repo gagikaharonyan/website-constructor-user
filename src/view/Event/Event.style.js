@@ -12,7 +12,9 @@ export const useStyles = makeStyles({
         width:900,
         margin: '40px auto',
         '@media only screen and (max-width:900)':{
-            flexDirection: 'column'
+            flexDirection: 'column',
+            width: '100%',
+            padding: '0 20px'
         }
     }
 });

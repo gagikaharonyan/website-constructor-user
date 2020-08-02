@@ -35,6 +35,7 @@ function Header(props) {
                 onChange={handleOnSearch}
                 value={site.searchedText}
                 style={{margin: '0 50px 0 20px'}}
+                placeholder='search post'
                 InputProps={{
                 startAdornment: (
                     <InputAdornment position="start">

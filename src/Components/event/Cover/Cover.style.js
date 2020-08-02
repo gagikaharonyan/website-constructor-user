@@ -18,7 +18,7 @@ export const useStyles =  makeStyles({
         position: 'relative',
         width: '100%',
         minHeight:'500px',
-        backgroundImage: "url('https://wallpaperhd.wiki/wp-content/uploads/football-wallpaper-football-wallpaper-for-ipad-1920x1080-4.jpg')",
+        // backgroundImage: "url('https://wallpaperhd.wiki/wp-content/uploads/football-wallpaper-football-wallpaper-for-ipad-1920x1080-4.jpg')",
         backgroundSize: 'cover',
         backgroundRepeat:'no-repeat'
 

@@ -54,10 +54,10 @@ const Home = (props) => {
                             >
                             </div>
                             <div className={classes.Title}>
-                                {events.data[key].title.length > 50 ? (
-                                    events.data[key].title.substring(0,50) + '...'
+                                {events.data[key].heading.length > 50 ? (
+                                    events.data[key].heading.substring(0,50) + '...'
                                 ) : (
-                                    events.data[key].title
+                                    events.data[key].heading
                                 )}
                             </div>
                         </Link>

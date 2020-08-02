@@ -9,7 +9,7 @@ import { useStyles } from './Slide.style';
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 function Slide (props) {
-
+  console.log(props.src, 58588)
   const classes = useStyles();
   const slider = (
     <AutoplaySlider animation="scaleOutAnimation"
@@ -18,8 +18,8 @@ function Slide (props) {
       interval={20000}
       
     >
-      {props.src.map(url => (
-        <div data-src={url} />
+      {props.src.map(img => (
+        <div data-src={img.url} />
       ))}
     </AutoplaySlider>
   )
