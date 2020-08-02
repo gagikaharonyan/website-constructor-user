@@ -7,10 +7,10 @@ import {connect} from 'react-redux';
 import {EventCardHome} from '../../Components/events/EventCardHome';
 import {PostCard} from '../../Components/posts';
 import Slide from '../../Components/commonComponents/Slide';
+import PostItemLoading from '../../Components/Loading/PostItemLoading'
 
 import {posts as _posts, events as _events, homeSlide as _slide} from '../../customs';
 
-import { cutText } from '../../extentions/excerpt';
 import {getSlider} from '../../client';
 
 import {useStyles} from './Home.style';
@@ -37,17 +37,32 @@ const Home = (props) => {
     return (
         <>
         <div className={classes.slideContainer}>
-            <Slide imgUrls={slider.data} loading={isLoading}/>
+            <Slide variant='home' imgUrls={slider.data} loading={isLoading}/>
         </div>
         <div className={`page page-width-container ${classes.homeContainer}`}>
             <div className={classes.postsContainer}>
                 <h2 className={classes.latestPosts}>Latest Posts</h2>
+
                 <div className={classes.posts}>
-                {Object.values(posts).slice(0,6).map(post => (
-                    <Link to={`post/${post.title}`} target='_blank' key={uuid()} >
-                        <PostCard src={post} loading={isLoading}/>
-                    </Link>
-                ))}
+                    { props.postsLoaded ? (
+                        <>
+                            {Object.values(posts).slice(0,6).map(post => (
+                                <Link to={`post/${post.id}`} target='_blank' key={uuid()} >
+                                    <PostCard src={post} loading={isLoading}/>
+                                </Link>
+                            ))}
+                        </>
+                    ) : (
+                        <>
+                            <PostItemLoading />
+                            <PostItemLoading />
+                            <PostItemLoading />
+                            <PostItemLoading />
+                            <PostItemLoading />
+                            <PostItemLoading />
+
+                        </>
+                    )}
                 </div>
                 <div className={classes.seeMore}>
                     <Link to='/posts'>
@@ -81,7 +96,7 @@ const mapStateToProps = (state) => ({
     events: state.events.data,
     eventsLoaded: state.events.isLoaded,
     posts: state.posts.data,
-    postsLoaded: state.posts.isLoading
+    postsLoaded: state.posts.isLoaded,
 });
   
 export default connect(mapStateToProps)(Home);

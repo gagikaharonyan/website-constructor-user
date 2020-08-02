@@ -9,7 +9,7 @@ export const useStyles = makeStyles({
     eventContent: {
         display: 'flex',
         width:900,
-        margin: '0px auto 0',
+        margin: '80px auto 0',
         alignItems: 'center',
         justifyContent: 'center',
         '@media only screen and (max-width:900)':{

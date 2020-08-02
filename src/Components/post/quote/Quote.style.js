@@ -15,7 +15,6 @@ export const useStyles = makeStyles({
         '& blockquote':  {
             fontWeight: 100,
             fontSize: '2rem',
-            maxWidth: 600,
             lineHeight: 1.4,
             position: 'relative',
             margin: 0,

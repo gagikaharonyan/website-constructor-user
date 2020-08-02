@@ -12,8 +12,9 @@ function Paragraph (props) {
                 
             </div>
         ): (
-            <div className={classes.paragraph}>
-                {props.text}
+            <div className={classes.paragrapհ}>
+                <div dangerouslySetInnerHTML={{ __html: props.text }}>
+                </div>
             </div>
         )}
         

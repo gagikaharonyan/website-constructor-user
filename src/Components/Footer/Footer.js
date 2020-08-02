@@ -5,7 +5,6 @@ import {connect} from 'react-redux';
 function Footer(props) {
     const {site} = props;
     const classes = useStyle();
-    console.log(site)
     const renderSocialLinks = (links) => {
         let component;
 

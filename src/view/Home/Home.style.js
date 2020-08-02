@@ -57,8 +57,10 @@ export const useStyles = makeStyles({
             marginLeft: 40,
         },
     },
+    postsContainer: {
+        width: '100%'
+    },
     slideContainer: {
-        height: 600,
         maxHeight:600,
         width: '100%',
         marginTop: 60,

@@ -11,14 +11,17 @@ function Slide (props) {
     
       <Carousel 
         animation='fade'
+        
         interval={5000}
         indicators={false}
         fullHeightHover={true}
         timeout={1000}
+        strictIndexing={false}
         className={classes.styleImage}
       >
           {props.imgUrls.map(imgUrl => (
-            <SlideImage img={imgUrl.url} key={uuid()}/>
+
+            <SlideImage img={props.variant === 'home' ? imgUrl.url : imgUrl} key={uuid()}/>
           ))}
       </Carousel>
   )
