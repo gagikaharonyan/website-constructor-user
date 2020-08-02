@@ -9,7 +9,7 @@ export const useStyles = makeStyles({
     eventContent: {
         display: 'flex',
         width:900,
-        margin: '40px auto',
+        margin: '0px auto 0',
         alignItems: 'center',
         justifyContent: 'center',
         '@media only screen and (max-width:900)':{
@@ -17,5 +17,10 @@ export const useStyles = makeStyles({
             width: '100%',
             padding: '0 20px'
         }
+    },
+    eventSkeletonContent:{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
     }
 });

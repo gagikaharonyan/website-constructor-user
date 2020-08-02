@@ -3,22 +3,22 @@ import { makeStyles } from '@material-ui/core';
 export const useStyle = makeStyles(theme => ({
     root: {
         width: 300,
-        height: 500,
+        height: 380,
         backgroundColor: '#FFFFFF',
         fontFamily: 'inherit',
         margin: '0px 20px 50px 20px',
         '@media only screen and (max-width:768px)': {
-            width: 300,
+            width: '100%',
             height: 500,
             flexDirection: 'column',
          }
     },
     media: {
-        height: '35%'
+        height: '50%'
     },
     content: {
         position: 'relative',
-        height: '65%',
+        height: '50%',
         overflow: 'hidden',
         fontFamily: 'inherit',
         display: 'flex',

@@ -10,18 +10,21 @@ export const useStyles = makeStyles({
         flexWrap: 'wrap',
         padding: '0 40px',
         width: '100%',
+        // margin: '0 10px',
+        
         '& .MuiPaper-root': {
-            width: '100%',
+            // width: '100%',
         },
         '@media only screen and (max-width:768px)':{
             justifyContent: 'center'
         },
         '& a': {
             maxWidth: 370,
+            minWidth: 300,
             width: '32%',
             height: 'fit-content',
             '@media only screen and (max-width:992px)':{
-                width: '48%' 
+                width: '48%' ,
             },
             '@media only screen and (max-width:768px)':{
                 width : '100%',
@@ -46,7 +49,7 @@ export const useStyles = makeStyles({
     latestPosts: {
         borderBottom: '1px solid grey',
         width: 'fit-content',
-        margin: '0 40px 20px 40px',
+        margin: '40px 40px 20px 40px',
         '@media only screen and (max-width:1280px)':{
             marginLeft: 30,
         },
@@ -55,12 +58,31 @@ export const useStyles = makeStyles({
         },
     },
     slideContainer: {
-        height: 'fit-content',
+        height: 600,
+        maxHeight:600,
         width: '100%',
-        marginTop: 60
+        marginTop: 60,
+        overflow: 'hidden',
+        '& .Carousel-fullHeightHoverWrapper-24': {
+            height:600
+        },
+        '@media only screen and (max-width:1280px)':{
+            height:400,
+            maxHeight: 400,
+        },
+        '@media only screen and (max-width:992px)':{
+            height:300,
+            maxHeight: 300,
+        },
+        '@media only screen and (max-width:600px)':{
+            height:250,
+            maxHeight: 250,
+        },
+        
     },
     eventsContainer: {
-        margin: '0 20px 20px 20px'
+        margin: '0 20px 20px 20px',
+        width: '100%',
     },
     newEvents:{
         width: 'fit-content',
@@ -72,7 +94,7 @@ export const useStyles = makeStyles({
         background: '#0000007d',
         width: '100%',   
         color: 'white',
-        padding: '10px 0'
+        padding: '10px 0 10px 10px',
 
     },
     eventImage: {
@@ -85,16 +107,22 @@ export const useStyles = makeStyles({
     },
     events: {
         display: 'flex',
-        justifyContent: 'space-between',
-        flexWrap: 'wrap'
+        justifyContent: 'flex-start',
+        flexWrap: 'wrap',
+        '@media only screen and (max-width:900px)':{
+            justifyContent: 'space-around',
+
+        },
     },
     eventContent: {
         width: '24%',
         height: 220,
         marginBottom:20,
+        marginRight: 10,
         '@media only screen and (max-width:900px)':{
-            width: '48%',
+            width: '46%',
         },
+        
     }
 
 })

@@ -1,37 +1,50 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import uuid from 'react-uuid';
 import { Link } from 'react-router-dom';
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import {connect} from 'react-redux';
+
+import {EventCardHome} from '../../Components/events/EventCardHome';
 import {PostCard} from '../../Components/posts';
 import Slide from '../../Components/commonComponents/Slide';
+
 import {posts as _posts, events as _events, homeSlide as _slide} from '../../customs';
+
+import { cutText } from '../../extentions/excerpt';
+import {getSlider} from '../../client';
 
 import {useStyles} from './Home.style';
 
 const Home = (props) => {
-    const newPosts = _posts.slice(0, 6);
-    const newEvents = _events.slice(0,4);
+    // const newPosts = props.posts.slice(0, 6);
     const [isLoading, setIsLoading] = useState(true);
-    const [posts, setPosts] = useState(newPosts);
+
+    const [slider, setSlider] = useState({isLoading: false, data: []})
     const classes = useStyles();
-    const {events} = props;
+
+    const {events, posts} = props;
+
     setTimeout(() => {
         setIsLoading(false)
     }, 1000)
 
-    console.log(props.events)
+    useEffect(() => {
+        getSlider(res => {
+            setSlider({isLoading: false, data: res.data})
+        })
+    }, []);
 
     return (
         <>
         <div className={classes.slideContainer}>
-            <Slide imgUrls={_slide} />
+            <Slide imgUrls={slider.data} loading={isLoading}/>
         </div>
         <div className={`page page-width-container ${classes.homeContainer}`}>
             <div className={classes.postsContainer}>
                 <h2 className={classes.latestPosts}>Latest Posts</h2>
                 <div className={classes.posts}>
-                {posts.map(post => (
-                    <Link to={`post/${post.title}`} target='_blank' >
+                {Object.values(posts).slice(0,6).map(post => (
+                    <Link to={`post/${post.title}`} target='_blank' key={uuid()} >
                         <PostCard src={post} loading={isLoading}/>
                     </Link>
                 ))}
@@ -46,22 +59,11 @@ const Home = (props) => {
             <div className={classes.eventsContainer}>
                 <h2 className={classes.newEvents}>New events</h2>
                 <div className={classes.events}>
-                    {Object.keys(events.data).map(key => (
-                        <Link to={`/event/${key}`} className={classes.eventContent}>
-                            <div 
-                                className={classes.eventImage} 
-                                style={{backgroundImage: `url(${events.data[key].imageUrl})`}}
-                            >
-                            </div>
-                            <div className={classes.Title}>
-                                {events.data[key].heading.length > 50 ? (
-                                    events.data[key].heading.substring(0,50) + '...'
-                                ) : (
-                                    events.data[key].heading
-                                )}
-                            </div>
-                        </Link>
-                       
+                    {Object.values(events).map(event => (
+                        <EventCardHome 
+                            event={event} 
+                            loading={isLoading}
+                            key={uuid()} />
                     ))}
                 </div>
                 <div className={classes.seeMore}>
@@ -76,7 +78,10 @@ const Home = (props) => {
 }
 
 const mapStateToProps = (state) => ({
-    events: state.events
+    events: state.events.data,
+    eventsLoaded: state.events.isLoaded,
+    posts: state.posts.data,
+    postsLoaded: state.posts.isLoading
 });
   
 export default connect(mapStateToProps)(Home);

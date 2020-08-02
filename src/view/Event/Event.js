@@ -23,7 +23,7 @@ function Event(props) {
 
     return (
       <>
-        {props.loading ? (
+        {props.loaded ? (
           <div className={`page ${classes.eventsContainer} `}>
             
           <Cover 
@@ -39,16 +39,24 @@ function Event(props) {
           </div>
   
           <Subscribe invitationText=''/>
-                       {/* {renderComponent(_event)}  */}
           </div>
         ): (
           <>
-          <Skeleton animation="rect" style={{width: "100%", height: 600 }} />
-          {/* <Skeleton animation="wave" height={10} style={{ marginBottom: 30, width: "50%"}} />
-          <Skeleton animation="wave" height={10} style={{ marginBottom: 15, width: "100%" }} />
-          <Skeleton animation="wave" height={10} style={{ marginBottom: 15, width: "100%" }} />
-          <Skeleton animation="wave" height={10} style={{ marginBottom: 15, width: "80%" }} />
-          <Skeleton animation="wave" height={10} style={{ marginBottom: 15, width: "70%" }} /> */}
+          <Skeleton animation="wave" variant="rect" style={{width: "100%", height: 600 }} />
+          <div className={classes.eventSkeletonContent}>
+            <div>
+            <Skeleton animation="wave" variant="text" height={20} style={{ margin: '30px 5px', width: 400}} />
+            <Skeleton animation="wave" variant="text" height={20} style={{ margin: '30px 5px', width: 400}} />
+            <Skeleton animation="wave" variant="text" height={20} style={{ margin: '30px 5px', width: 400}} />
+            <Skeleton animation="wave" variant="text" height={20} style={{ margin: '30px 5px', width: 400}} />
+            <Skeleton animation="wave" variant="text" height={20} style={{ margin: '30px 5px', width: 400}} />
+            <Skeleton animation="wave" variant="text" height={20} style={{ margin: '30px 5px', width: 400}} />
+            <Skeleton animation="wave" variant="text" height={20} style={{ margin: '30px 5px', width: 400}} />
+
+            </div>
+            <Skeleton animation="wave" variant='rect' height={300} style={{ margin: '30px 5px', width: 400 }} />
+          </div>
+         
           </>
         )}
           
@@ -59,10 +67,9 @@ function Event(props) {
 }
 
 const mapStateToProps = state => {
-  // it simply returns an object
   return {
     events: state.events.data,
-    loading: state.events.isLoaded
+    loaded: state.events.isLoaded
   }
 }
 

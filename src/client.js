@@ -31,3 +31,19 @@ export function getEvents(onSuccess) {
         console.log(error);
     })
 }
+
+export function getSlider(onSuccess) {
+    axios.get('https://website-constructor.firebaseio.com/nav-bar/slider.json')
+    .then(onSuccess)
+    .catch(error => {
+        console.log(error)
+    })
+}
+
+export function getCategories (onSuccess) {
+    axios.get('https://website-constructor.firebaseio.com/categories.json')
+    .then(onSuccess)
+    .catch(error => {
+        console.log(error)
+    })
+}

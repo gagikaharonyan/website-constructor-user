@@ -8,7 +8,7 @@ function Paragraph (props) {
     return (
         <>
         {props.variant === 'event' ? (
-            <div className={classes.paragraph} dangerouslySetInnerHTML={{ __html: props.text }}>
+            <div className={classes.eventParagraph} dangerouslySetInnerHTML={{ __html: props.text }}>
                 
             </div>
         ): (

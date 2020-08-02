@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import uuid from 'react-uuid';
 import {connect} from 'react-redux';
-import {EventCard} from '../../Components/events';
+import {EventCard} from '../../Components/events/EventCard';
 import {Link} from 'react-router-dom';
 import { useStyles } from './Events.style';
 
@@ -12,6 +12,7 @@ function Events(props) {
 
   return (
     <div className={`page ${classes.root}`}>
+      <div className={classes.eventsPageTitle}>Dont miss our Events</div>
       <div className={`page-width-container ${classes.eventsContainer}`}>
         {Object.keys(events.data).map(event =>
           <Link 

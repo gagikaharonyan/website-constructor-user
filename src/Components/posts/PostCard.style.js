@@ -16,6 +16,12 @@ export const useStyle = makeStyles({
     title: {
         maxHeight: 70,
         overflow: 'hidden',
+    },
+    learnMoreBtn: {
+        bottom: 0,
+        fontFamily: 'inherit',
+        fontWeight: 700,
+        margin: '20px 0'
     }
 
 })

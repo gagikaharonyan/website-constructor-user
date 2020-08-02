@@ -8,5 +8,15 @@ export const useStyles = makeStyles({
         '@media only screen and (max-width: 600px)': {
             width: '90%'
         }
+    },
+    eventParagraph: {
+        fontSize: 18,
+        width: '70%',
+
+        margin: 'auto 0',
+        '@media only screen and (max-width: 600px)': {
+            width: '90%'
+        }
     }
+
 })

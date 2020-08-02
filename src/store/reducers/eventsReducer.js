@@ -4,7 +4,7 @@ import {EVENTS_FETCH_SUCCESS,
 
 const initialState = {
     data: [],
-    isLoading: false,
+    isLoading: true,
     isLoaded: false,
     error: false,
 }
@@ -13,7 +13,7 @@ const EventsReducer = (state = initialState, action) => {
     switch (action.type) {
         case EVENTS_FETCH_SUCCESS:
             return {
-                ...state, data: action.payload, isLoaded: true
+                ...state, data: action.payload, isLoaded: true, isLoading: false
             };
         case LOADING_DATA:
             return {

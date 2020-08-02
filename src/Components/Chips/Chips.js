@@ -55,9 +55,11 @@ export default function Chips(props) {
     return (
         
         <div className={classes.root}>
-            {chips.map((chip, index) => (
-                <Chip key={index} label={chip} className={classes.chip} component="a" variant={isActiveChip(chip) ? 'default' : 'outlined'}
-                  onClick={() => handleClick(chip)}/>
-            ))}
+            <Chip 
+                label={props.src} 
+                className={classes.chip} 
+                component="a" 
+                variant={isActiveChip(props.src) ? 'default' : 'outlined'}
+                onClick={() => handleClick(props.src)}/>
         </div>);
 }

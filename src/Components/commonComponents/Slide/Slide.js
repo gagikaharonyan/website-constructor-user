@@ -8,7 +8,7 @@ import { useStyles } from './Slide.style';
 function Slide (props) {
   const classes = useStyles();
   return (
-    <div>
+    
       <Carousel 
         animation='fade'
         interval={5000}
@@ -18,10 +18,9 @@ function Slide (props) {
         className={classes.styleImage}
       >
           {props.imgUrls.map(imgUrl => (
-            <SlideImage img={imgUrl} key={uuid()}/>
+            <SlideImage img={imgUrl.url} key={uuid()}/>
           ))}
       </Carousel>
-    </div>
   )
 }
 
