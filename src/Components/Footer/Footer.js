@@ -3,40 +3,40 @@ import {useStyle} from './Footer.style';
 import {connect} from 'react-redux';
 
 function Footer(props) {
-    const {site} = props;
+    const {isLoaded, links} = props;
     const classes = useStyle();
-    console.log(site)
-    const renderSocialLinks = (links) => {
-        let component;
 
-        for(let i in links) {
-            switch (i) {
+    const renderSocialLinks = () => {
+        return Object.keys(links).map((key, index) => {
+            switch (key) {
                 case 'facebook':
-                    
-                    break;
+                    return <a hre={links[key]}>
+                        <i className="fab fa-facebook-f"></i>
+                    </a>
                 case 'instagram':
-                
-                    break;
-                case 'facebook':
-            
-                    break;
-            
+                    return <a hre={links[key]}>
+                        <i className="fab fa-instagram"></i>
+                    </a>
+                case 'pinterest':
+                    return <a hre={links[key]}>
+                        <i className="fab fa-pinterest-p"></i>
+                    </a>
+                case 'twitter':
+                    return <a hre={links[key]}>
+                        <i className="fab fa-twitter"></i>
+                    </a>
                 default:
                     break;
             }
-        }
+       });
     }
-
+    
     return(
         <div className={classes.root}>
             <div className={classes.socialLinks}>
-                {site.isLoaded
-                ? renderSocialLinks(site.data.networks)
-                :<h3>Loading..</h3>} 
-                <i className="fab fa-facebook-f"></i>
-                <i className="fab fa-instagram"></i>
-                <i className="fab fa-pinterest-p"></i>
-                <i className="fab fa-twitter"></i>
+                {isLoaded
+                ? renderSocialLinks()
+                :''} 
             </div>
             <span>© 2020 Website Constructor</span>
             <span>PicsArt Academy</span>
@@ -49,7 +49,8 @@ function Footer(props) {
 }
 
 const mapStateToProps = (state) => ({
-    site: state.site
+    links: state.site.data.networks,
+    isLoaded: state.site.isLoaded
 });
 
 export default connect(mapStateToProps)(Footer);

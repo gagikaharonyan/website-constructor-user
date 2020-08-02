@@ -11,12 +11,12 @@ import {useStyle} from './PostCard.style';
 import { cutText } from '../../extentions/excerpt'
 
 export function PostCard(props) {
-    const { loading = false, src } = props;
+    const { loaded = false, src } = props;
     const classes = useStyle();
 
     return (
         <Card className={classes.root}>
-          {loading ? (
+          {!loaded ? (
             <Skeleton animation="wave" variant="rect" className={classes.media} />
           ) : (
             <CardMedia
@@ -26,7 +26,7 @@ export function PostCard(props) {
             ></CardMedia>
           )}
           <CardContent className={classes.content}>
-            {loading ? (
+            {!loaded ? (
               <>
                 <Skeleton animation="wave" height={10} style={{ marginBottom: 15, width: "50%" }} />
                 <Skeleton animation="wave" height={10} style={{ marginBottom: 30, width: "50%"}} />
@@ -47,7 +47,6 @@ export function PostCard(props) {
                 {cutText(src.description, 150)}
               </Typography>
               <Button className={classes.learnMoreBtn} variant="outlined">Learn more</Button>              
-
             </>)}
           </CardContent>
         </Card>
