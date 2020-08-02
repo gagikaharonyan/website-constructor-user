@@ -1,4 +1,5 @@
 import React from 'react';
+import uuid from 'react-uuid';
 import AwesomeSlider from 'react-awesome-slider';
 import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import 'react-awesome-slider/dist/custom-animations/cube-animation.css';
@@ -9,7 +10,6 @@ import { useStyles } from './Slide.style';
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 function Slide (props) {
-  console.log(props.src, 58588)
   const classes = useStyles();
   const slider = (
     <AutoplaySlider animation="scaleOutAnimation"
@@ -19,7 +19,7 @@ function Slide (props) {
       
     >
       {props.src.map(img => (
-        <div data-src={img.url} />
+        <div key={uuid()} data-src={img.url} />
       ))}
     </AutoplaySlider>
   )

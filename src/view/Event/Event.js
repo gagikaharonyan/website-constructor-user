@@ -1,6 +1,9 @@
 import React, {useState, useEffect} from "react";
 import {useParams} from 'react-router-dom';
 import {connect} from 'react-redux';
+
+import Skeleton from '@material-ui/lab/Skeleton';
+
 import {Cover} from '../../Components/event/Cover';
 import { Slide } from '../../Components/commonComponents/Slide-v2';
 import { Subscribe } from '../../Components/event/SubscribeForm';
@@ -35,11 +38,18 @@ function Event(props) {
             {event.slide && (<Slide src={event.slide} />)}
           </div>
   
-          {/* <Subscribe invitationText={event.subscribe}/>
-                       {renderComponent(_event)} */}
+          <Subscribe invitationText=''/>
+                       {/* {renderComponent(_event)}  */}
           </div>
         ): (
-          'loading'
+          <>
+          <Skeleton animation="rect" style={{width: "100%", height: 600 }} />
+          {/* <Skeleton animation="wave" height={10} style={{ marginBottom: 30, width: "50%"}} />
+          <Skeleton animation="wave" height={10} style={{ marginBottom: 15, width: "100%" }} />
+          <Skeleton animation="wave" height={10} style={{ marginBottom: 15, width: "100%" }} />
+          <Skeleton animation="wave" height={10} style={{ marginBottom: 15, width: "80%" }} />
+          <Skeleton animation="wave" height={10} style={{ marginBottom: 15, width: "70%" }} /> */}
+          </>
         )}
           
       

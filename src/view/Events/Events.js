@@ -1,9 +1,8 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import uuid from 'react-uuid';
 import {connect} from 'react-redux';
 import {EventCard} from '../../Components/events';
 import {Link} from 'react-router-dom';
-import {getEventsInfo} from '../../client';
 import { useStyles } from './Events.style';
 
 function Events(props) {

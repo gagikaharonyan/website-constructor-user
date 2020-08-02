@@ -5,12 +5,13 @@ export const useStyles = makeStyles({
         marginTop:120,
     },
     eventsContainer: {
-        
     },
     eventContent: {
         display: 'flex',
         width:900,
         margin: '40px auto',
+        alignItems: 'center',
+        justifyContent: 'center',
         '@media only screen and (max-width:900)':{
             flexDirection: 'column',
             width: '100%',

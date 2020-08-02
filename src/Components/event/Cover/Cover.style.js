@@ -12,16 +12,14 @@ export const useStyles =  makeStyles({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        color: 'white'
+        color: 'white',
     },
     coverPhoto:{
         position: 'relative',
         width: '100%',
         minHeight:'500px',
-        // backgroundImage: "url('https://wallpaperhd.wiki/wp-content/uploads/football-wallpaper-football-wallpaper-for-ipad-1920x1080-4.jpg')",
         backgroundSize: 'cover',
-        backgroundRepeat:'no-repeat'
-
+        backgroundRepeat:'no-repeat',
     },
     eventHeading: {
         fontSize: '4em'
