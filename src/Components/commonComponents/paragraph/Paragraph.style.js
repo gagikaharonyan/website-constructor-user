@@ -13,7 +13,7 @@ export const useStyles = makeStyles({
         fontSize: 18,
         width: '70%',
 
-        margin: '80px auto 0',
+        margin: 'auto 0',
         '@media only screen and (max-width: 600px)': {
             width: '90%'
         }

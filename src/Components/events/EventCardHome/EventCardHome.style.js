@@ -42,5 +42,10 @@ export const useStyles = makeStyles({
         '@media only screen and (max-width:900px)':{
             width: '46%',
         },
+        '@media only screen and (max-width:600px)':{
+            width: '98%',
+            marginRight: 0,
+
+        },
     }
 })

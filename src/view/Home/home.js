@@ -22,7 +22,7 @@ const Home = (props) => {
     const [slider, setSlider] = useState({isLoading: false, data: []})
     const classes = useStyles();
 
-    const {events} = props;
+    const {events, posts} = props;
 
     setTimeout(() => {
         setIsLoading(false)
@@ -37,15 +37,13 @@ const Home = (props) => {
     return (
         <>
         <div className={classes.slideContainer}>
-            {console.log(slider, 69699)}
             <Slide imgUrls={slider.data} loading={isLoading}/>
         </div>
-        {console.log(props.posts, props.events, 50000)}
         <div className={`page page-width-container ${classes.homeContainer}`}>
             <div className={classes.postsContainer}>
                 <h2 className={classes.latestPosts}>Latest Posts</h2>
                 <div className={classes.posts}>
-                {Object.values(props.posts).slice(0,6).map(post => (
+                {Object.values(posts).slice(0,6).map(post => (
                     <Link to={`post/${post.title}`} target='_blank' key={uuid()} >
                         <PostCard src={post} loading={isLoading}/>
                     </Link>

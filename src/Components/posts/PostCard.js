@@ -1,4 +1,6 @@
 import React from 'react';
+
+import {Button} from '@material-ui/core';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -10,13 +12,10 @@ import { cutText } from '../../extentions/excerpt'
 
 export function PostCard(props) {
     const { loading = false, src } = props;
-
     const classes = useStyle();
 
     return (
         <Card className={classes.root}>
-            {console.log(src, 600)}
-
           {loading ? (
             <Skeleton animation="wave" variant="rect" className={classes.media} />
           ) : (
@@ -47,6 +46,8 @@ export function PostCard(props) {
               <Typography className={classes.description} variant="body2" color="textSecondary" component="p">
                 {cutText(src.description, 150)}
               </Typography>
+              <Button className={classes.learnMoreBtn} variant="outlined">Learn more</Button>              
+
             </>)}
           </CardContent>
         </Card>

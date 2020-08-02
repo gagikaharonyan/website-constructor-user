@@ -59,12 +59,25 @@ export const useStyles = makeStyles({
     },
     slideContainer: {
         height: 600,
+        maxHeight:600,
         width: '100%',
         marginTop: 60,
         overflow: 'hidden',
         '& .Carousel-fullHeightHoverWrapper-24': {
             height:600
-        }
+        },
+        '@media only screen and (max-width:1280px)':{
+            height:400,
+            maxHeight: 400,
+        },
+        '@media only screen and (max-width:992px)':{
+            height:300,
+            maxHeight: 300,
+        },
+        '@media only screen and (max-width:600px)':{
+            height:250,
+            maxHeight: 250,
+        },
         
     },
     eventsContainer: {
@@ -109,6 +122,7 @@ export const useStyles = makeStyles({
         '@media only screen and (max-width:900px)':{
             width: '46%',
         },
+        
     }
 
 })
