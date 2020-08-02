@@ -2,7 +2,7 @@ import React, {useState, useEffect } from 'react';
 import Header from '../Header';
 import Footer from '../Footer'
 import {connect} from 'react-redux';
-import {fetchSite, fetchEvents} from '../../store/actions';
+import {fetchSite, fetchEvents, fetchPosts} from '../../store/actions';
 import {SearchModal} from '../SearchModal';
 import {useStyles} from './UserLayout.style';
 
@@ -10,10 +10,13 @@ const UserLayout = (props) => {
     const classes = useStyles();
 
     const loadSite = () => {
-        const {site, events} = props;
+        const {site, events, posts} = props;
         props.site.isLoaded || props.fetchSite();
         if(site.isLoaded &&  !events.isLoaded) {
             props.fetchEvents();
+        }
+        if(events.isLoaded &&  !posts.isLoaded) {
+            props.fetchPosts();
         }
     }
 
@@ -31,12 +34,13 @@ const UserLayout = (props) => {
 
 const mapStateToProps = (state) => ({
     site: state.site,
-    events: state.events
+    events: state.events,
+    posts: state.posts
 });
 
 const mapDispatchToProps = (dispatch) => ({
     fetchSite: () => dispatch(fetchSite()),
-    fetchPosts: () => {},
+    fetchPosts: () => dispatch(fetchPosts()),
     fetchEvents: () => dispatch(fetchEvents())
 });
 
