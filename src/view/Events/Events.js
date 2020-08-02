@@ -17,7 +17,7 @@ function Events(props) {
         {Object.keys(events.data).map(event =>
           <Link 
               key={uuid()} 
-              to={`event/${events.data[event].id}`}
+              to={`/event/${events.data[event].id}`}
           >
             <EventCard src={events.data[event]} isLoading={isLoading}></EventCard>
           </Link>

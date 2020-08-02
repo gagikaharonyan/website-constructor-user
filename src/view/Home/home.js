@@ -47,7 +47,7 @@ const Home = (props) => {
                 <h2 className={classes.newEvents}>New events</h2>
                 <div className={classes.events}>
                     {Object.keys(events.data).map(key => (
-                        <Link to={`events/${key}`} className={classes.eventContent}>
+                        <Link to={`/event/${key}`} className={classes.eventContent}>
                             <div 
                                 className={classes.eventImage} 
                                 style={{backgroundImage: `url(${events.data[key].imageUrl})`}}
