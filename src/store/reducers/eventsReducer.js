@@ -1,19 +1,17 @@
-import {SITE_FETCH_SUCCESS, 
+import {EVENTS_FETCH_SUCCESS, 
     LOADING_DATA, 
-    ERROR,
-    SET_SEARCHED_TEXT} from "../actionTypes/all";
+    ERROR} from "../actionTypes/all";
 
 const initialState = {
-    data: {},
+    data: [],
     isLoading: false,
     isLoaded: false,
     error: false,
-    searchedText: '',
 }
 
-const SiteReducer = (state = initialState, action) => {
+const EventsReducer = (state = initialState, action) => {
     switch (action.type) {
-        case SITE_FETCH_SUCCESS:
+        case EVENTS_FETCH_SUCCESS:
             return {
                 ...state, data: action.payload, isLoaded: true
             };
@@ -25,13 +23,9 @@ const SiteReducer = (state = initialState, action) => {
             return {
                 ...state, error: action.payload
             };
-        case SET_SEARCHED_TEXT:
-            return {
-                ...state, searchedText: action.text
-            };
         default:
             return state
     }
 }
 
-export default SiteReducer;
+export default EventsReducer;

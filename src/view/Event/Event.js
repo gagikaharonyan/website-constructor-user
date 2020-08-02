@@ -10,8 +10,7 @@ import {WithUserContextFireBase} from '../../firebase/context';
 
 import { useStyles } from './Event.style';
 
-function Event(props) {
-    
+function Event(props) { 
     const param = useParams();
     const classes = useStyles();
 

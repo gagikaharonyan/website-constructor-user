@@ -32,7 +32,7 @@ export function getSiteBaseInfo(onSuccess) {
     })
 }
 
-export function getEventsInfo(onSuccess) {
+export function getEvents(onSuccess) {
     axios.get(`https://website-constructor.firebaseio.com/events.json`)
     .then(onSuccess)
     .catch(function (error) {

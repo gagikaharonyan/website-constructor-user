@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
-
+import {connect} from 'react-redux';
 import {PostCard} from '../../Components/posts';
 import Slide from '../../Components/commonComponents/Slide';
 import {posts as _posts, events as _events, homeSlide as _slide} from '../../customs';
@@ -9,16 +9,17 @@ import {posts as _posts, events as _events, homeSlide as _slide} from '../../cus
 import {useStyles} from './Home.style';
 
 const Home = (props) => {
-
     const newPosts = _posts.slice(0, 6);
     const newEvents = _events.slice(0,4);
     const [isLoading, setIsLoading] = useState(true);
     const [posts, setPosts] = useState(newPosts);
+    const classes = useStyles();
+    const {events} = props;
     setTimeout(() => {
         setIsLoading(false)
     }, 1000)
 
-    const classes = useStyles();
+    console.log(props.events)
 
     return (
         <>
@@ -45,26 +46,23 @@ const Home = (props) => {
             <div className={classes.eventsContainer}>
                 <h2 className={classes.newEvents}>New events</h2>
                 <div className={classes.events}>
-                    {newEvents.map(event => (
-                        <Link to={`events/${event.title}`} className={classes.eventContent}>
-                            
+                    {Object.keys(events.data).map(key => (
+                        <Link to={`events/${key}`} className={classes.eventContent}>
                             <div 
                                 className={classes.eventImage} 
-                                style={{backgroundImage: `url(${event.imgUrl})`}}
+                                style={{backgroundImage: `url(${events.data[key].imageUrl})`}}
                             >
                             </div>
-                            <div className={classes.eventTitle}>
-                                {event.title.length > 50 ? (
-                                    event.title.substring(0,50) + '...'
+                            <div className={classes.Title}>
+                                {events.data[key].title.length > 50 ? (
+                                    events.data[key].title.substring(0,50) + '...'
                                 ) : (
-                                    event.title
+                                    events.data[key].title
                                 )}
                             </div>
                         </Link>
                        
-                    ))
-
-                    }
+                    ))}
                 </div>
                 <div className={classes.seeMore}>
                     <Link to='/events'>
@@ -79,4 +77,8 @@ const Home = (props) => {
     )
 }
 
-export default Home;
+const mapStateToProps = (state) => ({
+    events: state.events
+});
+  
+export default connect(mapStateToProps)(Home);

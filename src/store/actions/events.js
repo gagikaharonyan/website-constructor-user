@@ -1,17 +1,16 @@
-import {SITE_FETCH_SUCCESS, 
+import {EVENTS_FETCH_SUCCESS, 
     LOADING_DATA,
     ERROR,
     SET_SEARCHED_TEXT} from '../actionTypes/all';
-import {getSiteBaseInfo} from '../../client';
+import {getEvents} from '../../client';
 
-const siteFetchSuccess = (site) => ({type: SITE_FETCH_SUCCESS, payload: site});
+const eventsFetchSuccess = (events) => ({type: EVENTS_FETCH_SUCCESS, payload: events});
 const siteIsLoading = (isLoading) => ({type: LOADING_DATA, payload: isLoading});
 const siteHasError = (error) => ({type: ERROR, payload: error});
 export const setSearchedText = (text) => ({type: SET_SEARCHED_TEXT, text})
 
-export const fetchSite = () => dispatch => {
-    getSiteBaseInfo((res) => {
-        dispatch(siteFetchSuccess(res.data));
+export const fetchEvents = () => dispatch => {
+    getEvents((res) => {
+        dispatch(eventsFetchSuccess(res.data));
     });
 }
-
