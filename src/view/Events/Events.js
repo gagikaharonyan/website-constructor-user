@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import uuid from 'react-uuid';
 import {connect} from 'react-redux';
-import {EventCard} from '../../Components/events';
+import {EventCard} from '../../Components/events/EventCard';
 import {Link} from 'react-router-dom';
 import { useStyles } from './Events.style';
 

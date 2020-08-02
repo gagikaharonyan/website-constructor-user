@@ -3,8 +3,11 @@ import uuid from 'react-uuid';
 import { Link } from 'react-router-dom';
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import {connect} from 'react-redux';
+
+import {EventCardHome} from '../../Components/events/EventCardHome';
 import {PostCard} from '../../Components/posts';
 import Slide from '../../Components/commonComponents/Slide';
+
 import {posts as _posts, events as _events, homeSlide as _slide} from '../../customs';
 
 import { cutText } from '../../extentions/excerpt';
@@ -17,17 +20,17 @@ const Home = (props) => {
     const [posts, setPosts] = useState(newPosts);
     const classes = useStyles();
     const {events} = props;
-    setTimeout(() => {
-        setIsLoading(false)
-    }, 1000)
 
-    console.log(props.events)
+        setTimeout(() => {
+            setIsLoading(false)
+        }, 1000)
 
     return (
         <>
         <div className={classes.slideContainer}>
             <Slide imgUrls={_slide} />
         </div>
+        {console.log(props.eventsLoaded)}
         <div className={`page page-width-container ${classes.homeContainer}`}>
             <div className={classes.postsContainer}>
                 <h2 className={classes.latestPosts}>Latest Posts</h2>
@@ -49,17 +52,10 @@ const Home = (props) => {
                 <h2 className={classes.newEvents}>New events</h2>
                 <div className={classes.events}>
                     {Object.values(events).map(event => (
-                        <Link to={`/event/${event.id}`} className={classes.eventContent} key={uuid()}>
-                            <div 
-                                className={classes.eventImage} 
-                                style={{backgroundImage: `url(${event.cover.url})`}}
-                            >
-                            </div>
-                            <div className={classes.eventTitle}>
-                                {cutText(event.heading, 50)}
-                            </div>
-                        </Link>
-                       
+                        <EventCardHome 
+                            event={event} 
+                            loading={isLoading}
+                            key={uuid()} />
                     ))}
                 </div>
                 <div className={classes.seeMore}>
@@ -75,6 +71,9 @@ const Home = (props) => {
 
 const mapStateToProps = (state) => ({
     events: state.events.data,
+    eventsLoaded: state.events.isLoaded,
+    posts: state.posts,
+    postsLoaded: state.posts.isLoaded
 });
   
 export default connect(mapStateToProps)(Home);

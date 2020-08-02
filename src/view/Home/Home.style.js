@@ -18,10 +18,11 @@ export const useStyles = makeStyles({
         },
         '& a': {
             maxWidth: 370,
+            minWidth: 300,
             width: '32%',
             height: 'fit-content',
             '@media only screen and (max-width:992px)':{
-                width: '48%' 
+                width: '48%' ,
             },
             '@media only screen and (max-width:768px)':{
                 width : '100%',
