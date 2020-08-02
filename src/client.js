@@ -39,3 +39,11 @@ export function getSlider(onSuccess) {
         console.log(error)
     })
 }
+
+export function getCategories (onSuccess) {
+    axios.get('https://website-constructor.firebaseio.com/categories.json')
+    .then(onSuccess)
+    .catch(error => {
+        console.log(error)
+    })
+}
