@@ -49,7 +49,7 @@ export const useStyles = makeStyles({
     latestPosts: {
         borderBottom: '1px solid grey',
         width: 'fit-content',
-        margin: '0 40px 20px 40px',
+        margin: '40px 40px 20px 40px',
         '@media only screen and (max-width:1280px)':{
             marginLeft: 30,
         },
@@ -58,9 +58,14 @@ export const useStyles = makeStyles({
         },
     },
     slideContainer: {
-        height: 'fit-content',
+        height: 600,
         width: '100%',
-        marginTop: 60
+        marginTop: 60,
+        overflow: 'hidden',
+        '& .Carousel-fullHeightHoverWrapper-24': {
+            height:600
+        }
+        
     },
     eventsContainer: {
         margin: '0 20px 20px 20px',

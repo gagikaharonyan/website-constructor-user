@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import uuid from 'react-uuid';
 import { Link } from 'react-router-dom';
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
@@ -11,31 +11,41 @@ import Slide from '../../Components/commonComponents/Slide';
 import {posts as _posts, events as _events, homeSlide as _slide} from '../../customs';
 
 import { cutText } from '../../extentions/excerpt';
+import {getSlider} from '../../client';
 
 import {useStyles} from './Home.style';
 
 const Home = (props) => {
-    const newPosts = _posts.slice(0, 6);
+    // const newPosts = props.posts.slice(0, 6);
     const [isLoading, setIsLoading] = useState(true);
-    const [posts, setPosts] = useState(newPosts);
+
+    const [slider, setSlider] = useState({isLoading: false, data: []})
     const classes = useStyles();
+
     const {events} = props;
 
-        setTimeout(() => {
-            setIsLoading(false)
-        }, 1000)
+    setTimeout(() => {
+        setIsLoading(false)
+    }, 1000)
+
+    useEffect(() => {
+        getSlider(res => {
+            setSlider({isLoading: false, data: res.data})
+        })
+    }, []);
 
     return (
         <>
         <div className={classes.slideContainer}>
-            <Slide imgUrls={_slide} loading={isLoading}/>
+            {console.log(slider, 69699)}
+            <Slide imgUrls={slider.data} loading={isLoading}/>
         </div>
-        {console.log(props.posts,props.postsLoaded, 50000)}
+        {console.log(props.posts, props.events, 50000)}
         <div className={`page page-width-container ${classes.homeContainer}`}>
             <div className={classes.postsContainer}>
                 <h2 className={classes.latestPosts}>Latest Posts</h2>
                 <div className={classes.posts}>
-                {Object.values(props.posts).map(post => (
+                {Object.values(props.posts).slice(0,6).map(post => (
                     <Link to={`post/${post.title}`} target='_blank' key={uuid()} >
                         <PostCard src={post} loading={isLoading}/>
                     </Link>
