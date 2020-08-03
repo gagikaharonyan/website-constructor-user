@@ -7,7 +7,7 @@ import { useStyles } from './Events.style';
 
 function Events(props) {
   const classes = useStyles();
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading] = useState(true);
   const {events} = props;
 
   return (

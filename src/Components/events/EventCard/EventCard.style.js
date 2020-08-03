@@ -34,7 +34,7 @@ export const useStyle = makeStyles(theme => ({
         height: 25,
         overflow: 'hidden',
         fontFamily: 'inherit',
-        marginTop: 5
+        margin: 8
     },
     date:{
         fontFamily: 'inherit',

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import {useParams} from 'react-router-dom';
 import {connect} from 'react-redux';
 
@@ -9,61 +9,54 @@ import { Slide } from '../../Components/commonComponents/Slide-v2';
 import { Subscribe } from '../../Components/event/SubscribeForm';
 import Paragraph from '../../Components/commonComponents/paragraph';
 
-
-// import {WithUserContextFireBase} from '../../firebase/context';
-
 import { useStyles } from './Event.style';
 
 function Event(props) { 
 
-    const param = useParams();
-    const classes = useStyles();
+  const param = useParams();
+  const classes = useStyles();
 
-    const [event] = Object.values(props.events).filter(val => (val.id === param.id));
+  const [event] = Object.values(props.events).filter(val => (val.id === param.id));
 
-    return (
-      <>
-        {props.loaded ? (
-          <div className={`page ${classes.eventsContainer} `}>
-            
-          <Cover 
-            src={event.cover.url} 
-            date={event.date} 
-            text={event.heading}
-            timer={event.dateBySeconds}
-            location={event.location}
-          />
-          <div className={classes.eventContent}>
-            <Paragraph text={event.details} variant='event'/>
-            {event.slide && (<Slide src={event.slide} />)}
-          </div>
-  
-          <Subscribe invitationText=''/>
-          </div>
-        ): (
-          <>
-          <Skeleton animation="wave" variant="rect" style={{width: "100%", height: 600 }} />
-          <div className={classes.eventSkeletonContent}>
-            <div>
-            <Skeleton animation="wave" variant="text" height={20} style={{ margin: '30px 5px', width: 400}} />
-            <Skeleton animation="wave" variant="text" height={20} style={{ margin: '30px 5px', width: 400}} />
-            <Skeleton animation="wave" variant="text" height={20} style={{ margin: '30px 5px', width: 400}} />
-            <Skeleton animation="wave" variant="text" height={20} style={{ margin: '30px 5px', width: 400}} />
-            <Skeleton animation="wave" variant="text" height={20} style={{ margin: '30px 5px', width: 400}} />
-            <Skeleton animation="wave" variant="text" height={20} style={{ margin: '30px 5px', width: 400}} />
-            <Skeleton animation="wave" variant="text" height={20} style={{ margin: '30px 5px', width: 400}} />
+  return (
+    <>
+      {props.loaded ? (
+        <div className={`page ${classes.eventsContainer} `}>
+        <Cover 
+          src={event.cover.url} 
+          date={event.date} 
+          text={event.heading}
+          timer={event.dateBySeconds}
+          location={event.location}
+        />
+        <div className={classes.eventContent}>
+          <Paragraph text={event.details} variant='event'/>
+          {event.slide && (<Slide src={event.slide} />)}
+        </div>
 
-            </div>
-            <Skeleton animation="wave" variant='rect' height={300} style={{ margin: '30px 5px', width: 400 }} />
+        <Subscribe invitationText=''/>
+        </div>
+      ): (
+        <>
+        <Skeleton animation="wave" variant="rect" style={{width: "100%", height: 600 }} />
+        <div className={classes.eventSkeletonContent}>
+          <div>
+          <Skeleton animation="wave" variant="text" height={20} style={{ margin: '30px 5px', width: 400}} />
+          <Skeleton animation="wave" variant="text" height={20} style={{ margin: '30px 5px', width: 400}} />
+          <Skeleton animation="wave" variant="text" height={20} style={{ margin: '30px 5px', width: 400}} />
+          <Skeleton animation="wave" variant="text" height={20} style={{ margin: '30px 5px', width: 400}} />
+          <Skeleton animation="wave" variant="text" height={20} style={{ margin: '30px 5px', width: 400}} />
+          <Skeleton animation="wave" variant="text" height={20} style={{ margin: '30px 5px', width: 400}} />
+          <Skeleton animation="wave" variant="text" height={20} style={{ margin: '30px 5px', width: 400}} />
+
           </div>
-         
-          </>
-        )}
-          
-      
-      </>
+          <Skeleton animation="wave" variant='rect' height={300} style={{ margin: '30px 5px', width: 400 }} />
+        </div>
         
-    );
+        </>
+      )}
+    </>
+  );
 }
 
 const mapStateToProps = state => {
@@ -73,6 +66,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(Event)
-
-// export default WithUserContextFireBase(Event);
+export default connect(mapStateToProps)(Event);

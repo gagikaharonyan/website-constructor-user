@@ -7,7 +7,8 @@ export const useStyle = makeStyles(theme => ({
         alignItems: 'flex-start',
         flexDirection: 'column',
         fontSize: 20,
-        padding: '100px 40px 60px 60px',
+        padding: '0 40px 0 60px',
+        justifyContent: 'center',
         '@media only screen and (max-width:768px)': {
            padding: '20px',
         }

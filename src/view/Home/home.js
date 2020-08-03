@@ -46,7 +46,7 @@ const Home = (props) => {
                 <div className={classes.posts}>
                     { props.postsLoaded ? (
                         <>
-                            {Object.values(posts).slice(0,6).map(post => (
+                            {Object.values(posts).reverse().slice(0,6).map(post => (
                                 <Link to={`post/${post.id}`} target='_blank' key={uuid()} >
                                     <PostCard src={post} loading={isLoading}/>
                                 </Link>
@@ -74,7 +74,7 @@ const Home = (props) => {
             <div className={classes.eventsContainer}>
                 <h2 className={classes.newEvents}>New events</h2>
                 <div className={classes.events}>
-                    {Object.values(events).map(event => (
+                    {Object.values(events).slice(0,4).map(event => (
                         <EventCardHome 
                             event={event} 
                             loading={isLoading}
