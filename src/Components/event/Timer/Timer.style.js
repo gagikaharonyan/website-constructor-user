@@ -2,7 +2,10 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export const useStyle = makeStyles(theme => ({
     root: {
-        fontSize: 30
+        fontSize: 30,
+        '@media only screen and (max-width:900px)': {
+            fontSize:25,
+        }
     },
     timer: {
         display: 'flex',
@@ -18,5 +21,10 @@ export const useStyle = makeStyles(theme => ({
         fontSize: 70,
         display: 'flex',
         justifyContent: 'center',
+        '@media only screen and (max-width:900px)': {
+            fontSize:25,
+            height: 'unset',
+            marginTop:20
+        }
     }
 }));

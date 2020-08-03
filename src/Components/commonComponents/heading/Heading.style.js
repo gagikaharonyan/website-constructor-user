@@ -13,7 +13,11 @@ export const useStyles = makeStyles({
         fontSize: '4em',
         lineHeight: 1,
         width: 650,
-        textAlign: 'center'
+        textAlign: 'center',
+        '@media only screen and (max-width:600px)': {
+            fontSize: 40,
+            width:'100%'
+          }
 
     }
 })

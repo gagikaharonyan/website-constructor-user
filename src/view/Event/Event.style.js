@@ -12,7 +12,7 @@ export const useStyles = makeStyles({
     margin: '80px auto 0',
     alignItems: 'center',
     justifyContent: 'center',
-    '@media only screen and (max-width:900)':{
+    '@media only screen and (max-width:900px)':{
       flexDirection: 'column',
       width: '100%',
       padding: '0 20px'

@@ -25,9 +25,17 @@ function Slide (props) {
     </AutoplaySlider>
   )
   return (
-    <div className={classes.sliderContainer}>
-      {slider}
-    </div>
+    <>
+      {props.variant === 'event' ? (
+        <div className={classes.eventSliderContainer}>
+          {slider}
+        </div>
+      ) : (
+        <div className={classes.sliderContainer}>
+          {slider}
+        </div>
+      )}
+    </>
   )
 }
 

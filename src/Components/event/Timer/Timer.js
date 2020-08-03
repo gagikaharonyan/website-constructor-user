@@ -30,13 +30,13 @@ function Timer(props) {
               <span className={classes.digit}>
                   <Time.Minutes />
               </span>
-              <span>minutes</span>
+              <span>min</span>
             </div>
             <div className={classes.timerCol}>
               <span className={classes.digit}>
                   <Time.Seconds />
               </span>
-              <span>seconds</span>
+              <span>sec</span>
             </div>
           </div>
         )}

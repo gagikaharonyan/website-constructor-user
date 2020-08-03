@@ -23,5 +23,4 @@ Video.propTypes = {
   param: PropTypes.string.isRequired,
 };
 
-
 export default Video;

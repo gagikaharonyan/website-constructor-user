@@ -26,7 +26,6 @@ function Cover ({date, text, location, timer, src}) {
 Cover.propTypes = {
   src: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
   timer: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired
 };

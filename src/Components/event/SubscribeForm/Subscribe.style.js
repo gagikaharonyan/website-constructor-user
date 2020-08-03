@@ -9,6 +9,9 @@ export const useStyle = makeStyles(theme => ({
         boxShadow: '0px 0px 9px 3px rgba(41,41,41,.25)',
         padding: 40,
         margin: 40,
+        '@media only screen and (max-width:600px)': {
+            width: '100%'
+        }
     },
     formTitle: {
        textAlign: 'center',

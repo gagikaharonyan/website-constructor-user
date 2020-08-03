@@ -32,7 +32,7 @@ function Event(props) {
         />
         <div className={classes.eventContent}>
           <Paragraph text={event.details} variant='event'/>
-          {event.slide && (<Slide src={event.slide} />)}
+          {event.slide && (<Slide src={event.slide} variant='event'/>)}
         </div>
 
         <Subscribe invitationText=''/>
