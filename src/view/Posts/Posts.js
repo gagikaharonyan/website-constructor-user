@@ -4,7 +4,9 @@ import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {PostCard} from '../../Components/posts';
 import {useStyle} from './Posts.style';
-import Chips from '../../Components/Chips/Chips'
+import Chips from '../../Components/Chips/Chips';
+
+import PostItemLoading from '../../Components/Loading/PostItemLoading';
 import {getCategories} from '../../client'
 
 function Posts(props) {
@@ -35,11 +37,26 @@ function Posts(props) {
                     ?<Loading/>
                     :<Chips src={Object.values(categories.data)} onSetActiveChips={handleOnSetActiveChips}></Chips>}
                 </div>
-                {Object.values(sortedPosts).map(post => 
-                    <Link to={`post/${post.title}`}>
-                        <PostCard src={post} loaded={isLoaded}></PostCard>
-                    </Link>
+                { isLoaded ? (
+                    <>
+                        {Object.values(sortedPosts).map(post => 
+                            <Link to={`post/${post.id}`}>
+                                <PostCard src={post} loaded={isLoaded}></PostCard>
+                            </Link>
+                        )}
+                    </>
+                ) : (
+                    <>
+                        <PostItemLoading />
+                        <PostItemLoading />
+                        <PostItemLoading />
+                        <PostItemLoading />
+                        <PostItemLoading />
+                        <PostItemLoading />
+                    </>
                 )}
+
+                
             </div>
         </div>
     );

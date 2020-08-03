@@ -7,6 +7,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'flex-start',
         flexWrap: 'wrap',
+        minHeight:48,
         '& > *': {
             fontFamily: "'Karla', sans-serif",
             fontWeight: 700,
