@@ -1,5 +1,5 @@
 import React, {useState, useEffect } from "react";
-import {ContactForm, ContactInfos} from '../../Components/contactUs';
+import {ContactForm, ContactInfos} from '../../Components/ContactUs';
 import { useStyle } from "./ContactUs.style";
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import {getContactInfos} from '../../client';
