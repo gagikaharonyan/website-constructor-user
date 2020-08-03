@@ -13,7 +13,7 @@ function Slide (props) {
       animation='fade'
       
       interval={5000}
-      indicators={false}
+      indicators={true}
       fullHeightHover={true}
       timeout={1000}
       strictIndexing={false}

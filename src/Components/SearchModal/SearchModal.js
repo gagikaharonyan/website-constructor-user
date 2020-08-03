@@ -18,7 +18,7 @@ function SearchModal(props) {
         return (
             <div className={classes.root}>
                 {posts.map((post) => 
-                    <Link to={`/post/${post.title}`} onClick={() => props.closeModal()} style={{width: '100%'}}>
+                    <Link to={`/post/${post.id}`} onClick={() => props.closeModal()} style={{width: '100%'}}>
                         <PostCard src={post}/>
                     </Link>)}
             </div>
