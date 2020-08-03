@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { CardMedia } from '@material-ui/core';
 
 import { useStyles } from './Photo.style';
@@ -17,5 +18,9 @@ function Photo (props) {
     </div>
   )
 }
+
+Photo.propTypes = {
+  img: PropTypes.string.isRequired,
+};
 
 export default Photo;

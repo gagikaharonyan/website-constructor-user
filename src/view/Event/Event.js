@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import {useParams} from 'react-router-dom';
 import {connect} from 'react-redux';
 
@@ -41,14 +42,13 @@ function Event(props) {
         <Skeleton animation="wave" variant="rect" style={{width: "100%", height: 600 }} />
         <div className={classes.eventSkeletonContent}>
           <div>
-          <Skeleton animation="wave" variant="text" height={20} style={{ margin: '30px 5px', width: 400}} />
-          <Skeleton animation="wave" variant="text" height={20} style={{ margin: '30px 5px', width: 400}} />
-          <Skeleton animation="wave" variant="text" height={20} style={{ margin: '30px 5px', width: 400}} />
-          <Skeleton animation="wave" variant="text" height={20} style={{ margin: '30px 5px', width: 400}} />
-          <Skeleton animation="wave" variant="text" height={20} style={{ margin: '30px 5px', width: 400}} />
-          <Skeleton animation="wave" variant="text" height={20} style={{ margin: '30px 5px', width: 400}} />
-          <Skeleton animation="wave" variant="text" height={20} style={{ margin: '30px 5px', width: 400}} />
-
+            <Skeleton animation="wave" variant="text" height={20} style={{ margin: '30px 5px', width: 400}} />
+            <Skeleton animation="wave" variant="text" height={20} style={{ margin: '30px 5px', width: 400}} />
+            <Skeleton animation="wave" variant="text" height={20} style={{ margin: '30px 5px', width: 400}} />
+            <Skeleton animation="wave" variant="text" height={20} style={{ margin: '30px 5px', width: 400}} />
+            <Skeleton animation="wave" variant="text" height={20} style={{ margin: '30px 5px', width: 400}} />
+            <Skeleton animation="wave" variant="text" height={20} style={{ margin: '30px 5px', width: 400}} />
+            <Skeleton animation="wave" variant="text" height={20} style={{ margin: '30px 5px', width: 400}} />
           </div>
           <Skeleton animation="wave" variant='rect' height={300} style={{ margin: '30px 5px', width: 400 }} />
         </div>
@@ -65,5 +65,10 @@ const mapStateToProps = state => {
     loaded: state.events.isLoaded
   }
 }
+
+Event.propTypes = {
+  events: PropTypes.object.isRequired,
+  loaded: PropTypes.bool.isRequired
+};
 
 export default connect(mapStateToProps)(Event);

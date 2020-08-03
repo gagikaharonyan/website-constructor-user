@@ -1,7 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {useParams} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {Container} from '@material-ui/core';
+
 import Slide from '../../Components/commonComponents/Slide';
 import Heading from '../../Components/commonComponents/heading';
 import Photo from '../../Components/commonComponents/photo';
@@ -41,5 +43,10 @@ const mapStateToProps = (state) => ({
     posts: state.posts.data,
     postsLoaded: state.posts.isLoading
 });
+
+Post.propTypes = {
+  posts: PropTypes.object.isRequired,
+  postsLoaded: PropTypes.bool
+};
 
 export default connect(mapStateToProps)(Post);

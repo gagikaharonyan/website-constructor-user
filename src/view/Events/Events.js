@@ -1,6 +1,8 @@
 import React, {useState} from "react";
+import PropTypes from 'prop-types';
 import uuid from 'react-uuid';
 import {connect} from 'react-redux';
+
 import {EventCard} from '../../Components/events/EventCard';
 import {Link} from 'react-router-dom';
 import { useStyles } from './Events.style';
@@ -30,5 +32,9 @@ function Events(props) {
 const mapStateToProps = (state) => ({
   events: state.events
 });
+
+Events.propTypes = {
+  events: PropTypes.object.isRequired,
+};
 
 export default connect(mapStateToProps)(Events);

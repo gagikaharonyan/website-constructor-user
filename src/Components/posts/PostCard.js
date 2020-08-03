@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {Button} from '@material-ui/core';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -6,8 +7,9 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import {useStyle} from './PostCard.style';
 import PostItemLoading from '../../Components/Loading/PostItemLoading'
-import { cutText } from '../../extentions/excerpt'
-export function PostCard(props) {
+import { cutText } from '../../extentions/excerpt';
+
+function PostCard(props) {
     const { loading = false, src } = props;
     const classes = useStyle();
     return (
@@ -36,6 +38,13 @@ export function PostCard(props) {
           </CardContent>
         </Card>
       )}
-      </>
+    </>
   );
 }
+
+PostCard.propTypes = {
+  src: PropTypes.object.isRequired,
+  loading: PropTypes.bool,
+};
+
+export default PostCard;

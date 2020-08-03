@@ -1,13 +1,17 @@
 import React, {useState, useEffect} from "react";
-import Loading from '../../Components/Loading';
+import PropTypes from 'prop-types';
+import uuid from 'react-uuid';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
-import {PostCard} from '../../Components/posts';
-import {useStyle} from './Posts.style';
-import Chips from '../../Components/Chips/Chips';
 
+import Loading from '../../Components/Loading';
+import {PostCard} from '../../Components/posts';
+import Chips from '../../Components/Chips/Chips';
 import PostItemLoading from '../../Components/Loading/PostItemLoading';
-import {getCategories} from '../../client'
+import {getCategories} from '../../client';
+
+import {useStyle} from './Posts.style';
+
 
 function Posts(props) {
   const classes = useStyle();
@@ -40,7 +44,7 @@ function Posts(props) {
         { isLoaded ? (
           <>
             {Object.values(sortedPosts).reverse().map(post => 
-              <Link to={`post/${post.id}`}>
+              <Link key={uuid()} to={`post/${post.id}`}>
                 <PostCard src={post} loaded={isLoaded}></PostCard>
               </Link>
             )}
@@ -55,8 +59,6 @@ function Posts(props) {
             <PostItemLoading />
           </>
         )}
-
-          
       </div>
     </div>
   );
@@ -67,4 +69,9 @@ const mapStateToProps = (state) => ({
     isLoaded: state.posts.isLoaded
 });
   
+Posts.propTypes = {
+  posts: PropTypes.object.isRequired,
+  isLoading: PropTypes.bool
+};
+
 export default connect(mapStateToProps)(Posts);

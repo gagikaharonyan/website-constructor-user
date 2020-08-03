@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 
 import {useStyles} from './Location.style';
@@ -14,5 +15,9 @@ function Location (props){
         </div>
     )
 }
+
+Location.propTypes = {
+    location: PropTypes.string.isRequired,
+};
 
 export default Location;

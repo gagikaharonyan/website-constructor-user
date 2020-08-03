@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import uuid from 'react-uuid';
 import AwesomeSlider from 'react-awesome-slider';
 import withAutoplay from 'react-awesome-slider/dist/autoplay';
@@ -14,7 +15,7 @@ function Slide (props) {
   const slider = (
     <AutoplaySlider animation="scaleOutAnimation"
       play={true}
-      cancelOnInteraction={false} // should stop playing on user interaction
+      cancelOnInteraction={false} 
       interval={20000}
       
     >
@@ -28,6 +29,11 @@ function Slide (props) {
       {slider}
     </div>
   )
+}
+
+Slide.propTypes = {
+  img: PropTypes.string.isRequired,
+  src: PropTypes.array.isRequired
 }
 
 export default Slide;

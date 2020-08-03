@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Chips(props) {
     const classes = useStyles();
-    const [chips, setChips] = useState(props.src);
+    const [chips] = useState(props.src);
     const [activeChips, setActiveChips] = useState([]);
     const isActiveChip = (name) => activeChips.includes(name);
 

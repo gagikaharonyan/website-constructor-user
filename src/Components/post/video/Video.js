@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { useStyles } from './Video.style';
 
@@ -17,5 +18,10 @@ function Video (props) {
     </div>
   )
 }
+
+Video.propTypes = {
+  param: PropTypes.string.isRequired,
+};
+
 
 export default Video;

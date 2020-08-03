@@ -3,7 +3,7 @@ import {EVENTS_FETCH_SUCCESS,
     ERROR} from "../actionTypes/all";
 
 const initialState = {
-    data: [],
+    data: {},
     isLoading: true,
     isLoaded: false,
     error: false,

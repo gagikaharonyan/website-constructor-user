@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import Skeleton from '@material-ui/lab/Skeleton';
 import Card from '@material-ui/core/Card';
@@ -9,7 +11,7 @@ import Button from '@material-ui/core/Button';
 import EventIcon from '@material-ui/icons/Event';
 import {useStyle} from './EventCard.style';
 
-export function EventCard(props) {
+function EventCard(props) {
     const { loading = false, src } = props;
     const classes = useStyle();
 
@@ -46,17 +48,16 @@ export function EventCard(props) {
                 >
                     <EventIcon/> {src.date}
                 </Typography>
-                {/* <Typography 
-                  className={classes.description} 
-                  variant="body2" 
-                  color="textSecondary"
-                  component="p"
-                  dangerouslySetInnerHTML={{ __html: src.details }}
-                >
-                </Typography> */}
                 <Button className={classes.learnMoreBtn} variant="outlined">Learn more</Button>              
             </>)}
           </CardContent>
         </Card>
         );
 }
+
+EventCard.propTypes = {
+  src: PropTypes.object.isRequired,
+  loading: PropTypes.bool
+};
+
+export default EventCard;

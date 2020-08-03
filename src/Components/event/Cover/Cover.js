@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 import {Date} from '../Date';
 import {Timer} from '../Timer';
 import {Location} from '../Location';
@@ -23,5 +23,12 @@ function Cover ({date, text, location, timer, src}) {
     </div>
   )
 }
+Cover.propTypes = {
+  src: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  timer: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired
+};
 
 export default Cover;
