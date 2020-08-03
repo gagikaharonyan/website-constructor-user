@@ -47,3 +47,11 @@ export function getCategories (onSuccess) {
         console.log(error)
     })
 }
+
+export function getAboitInfo(onSuccess) {
+    axios.get(`https://website-constructor.firebaseio.com/aboutUs.json`)
+    .then(onSuccess)
+    .catch(function (error) {
+        console.log(error);
+    })
+}

@@ -21,7 +21,7 @@ export function ContactForm(props) {
     }
 
     return (
-        <div className={classes.root} autocomplete="off" onSubmit={handleSubmit}>
+        <div className={classes.root} autoComplete="off" onSubmit={handleSubmit}>
             <span className={classes.caption}>Contact us</span>
             <form className={classes.form} autoComplete="off">
                 <div className={classes.row}>

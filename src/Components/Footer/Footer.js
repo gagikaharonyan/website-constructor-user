@@ -1,4 +1,5 @@
 import React from 'react';
+import uuid from 'react-uuid';
 import {useStyle} from './Footer.style';
 import {connect} from 'react-redux';
 
@@ -10,19 +11,19 @@ function Footer(props) {
         return Object.keys(links).map((key, index) => {
             switch (key) {
                 case 'facebook':
-                    return <a href={links[key]}>
+                    return <a key={uuid()} href={links[key]}>
                         <i className="fab fa-facebook-f"></i>
                     </a>
                 case 'instagram':
-                    return <a href={links[key]}>
+                    return <a key={uuid()} href={links[key]}>
                         <i className="fab fa-instagram"></i>
                     </a>
                 case 'pinterest':
-                    return <a href={links[key]}>
+                    return <a key={uuid()} href={links[key]}>
                         <i className="fab fa-pinterest-p"></i>
                     </a>
                 case 'twitter':
-                    return <a href={links[key]}>
+                    return <a key={uuid()} href={links[key]}>
                         <i className="fab fa-twitter"></i>
                     </a>
                 default:

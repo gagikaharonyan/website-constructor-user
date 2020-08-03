@@ -8,6 +8,7 @@ export const useStyles = makeStyles ({
         display: 'flex',
         alignItems: 'center',
         overflow: 'hidden',
+        justifyContent: 'center',
         '@media only screen and (max-width:768px)': {
             width: '100%',
             height: 'auto',
